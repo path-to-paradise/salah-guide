@@ -1,0 +1,109 @@
+import { useEffect, useState } from 'react'
+import { NavLink, Link } from 'react-router-dom'
+import { useLang, LANGS } from '../i18n/LanguageContext.jsx'
+import { useGender } from '../i18n/GenderContext.jsx'
+
+const routes = [
+  { to: '/basics', key: 'basics' },
+  { to: '/purity', key: 'purity' },
+  { to: '/times', key: 'times' },
+  { to: '/how-to-pray', key: 'howto' },
+  { to: '/types', key: 'types' },
+  { to: '/duas', key: 'duas' },
+  { to: '/beyond', key: 'beyond' },
+  { to: '/quiz', key: 'quiz' },
+  { to: '/glossary', key: 'glossary' },
+]
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const { lang, setLang, t } = useLang()
+  const { gender, setGender } = useGender()
+
+  // Shadow once the page is scrolled, so the sticky header lifts off content.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 6)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Escape closes the mobile menu.
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e) => e.key === 'Escape' && setOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
+  return (
+    <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-top">
+        <Link to="/" className="brand" onClick={() => setOpen(false)}>
+          <span className="brand-mark" aria-hidden="true">🕌</span>
+          <span className="brand-text">
+            Salah<span className="brand-accent">Guide</span>
+          </span>
+        </Link>
+        <div className="nav-controls">
+          <div className="lang-switch" role="group" aria-label={t.gender.switchTitle}>
+            <button
+              className={gender === 'male' ? 'active' : ''}
+              onClick={() => setGender('male')}
+              aria-pressed={gender === 'male'}
+              title={`${t.gender.switchTitle}: ${t.gender.maleShort}`}
+            >
+              👨
+            </button>
+            <button
+              className={gender === 'female' ? 'active' : ''}
+              onClick={() => setGender('female')}
+              aria-pressed={gender === 'female'}
+              title={`${t.gender.switchTitle}: ${t.gender.femaleShort}`}
+            >
+              🧕
+            </button>
+          </div>
+          <div className="lang-switch" role="group" aria-label="Language">
+            {LANGS.map((l) => (
+              <button
+                key={l.code}
+                className={lang === l.code ? 'active' : ''}
+                onClick={() => setLang(l.code)}
+                aria-pressed={lang === l.code}
+                title={l.label}
+              >
+                {l.short}
+              </button>
+            ))}
+          </div>
+          <button
+            className={`nav-toggle ${open ? 'open' : ''}`}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </div>
+      <div className={`nav-row ${open ? 'open' : ''}`}>
+        <nav className="nav-links">
+          {routes.map((r) => (
+            <NavLink
+              key={r.to}
+              to={r.to}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              {t.nav[r.key]}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+    </header>
+  )
+}
