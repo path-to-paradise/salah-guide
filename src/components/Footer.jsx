@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-col">
-          <h4>🕌 SalahGuide</h4>
+          <h4>🕌 {t.brand.full}</h4>
           <p>{t.footer.blurb}</p>
           <p className="footer-note">{t.footer.note}</p>
         </div>

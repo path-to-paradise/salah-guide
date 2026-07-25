@@ -1,6 +1,11 @@
 // Shared UI strings. Page-specific copy lives in each page file.
 export const ui = {
   en: {
+    brand: {
+      main: 'Salah',
+      accent: 'Guide',
+      full: 'SalahGuide',
+    },
     nav: {
       basics: 'Before You Pray',
       purity: 'Purity',
@@ -66,13 +71,15 @@ export const ui = {
     },
     pt: {
       title: "🕋 Today's prayer times",
-      meta: 'Allow location access, or enter your city — times are calculated by the AlAdhan API (Muslim World League method).',
+      meta: 'Enter your city, or use your current location when you choose — times are calculated by the AlAdhan API (Muslim World League method).',
       yourLocation: 'Your location',
       city: 'City (e.g. London)',
       country: 'Country (e.g. UK)',
       get: 'Get times',
+      useLocation: 'Use my location',
       loading: 'Loading…',
       errGeneric: 'Could not load prayer times. Try entering your city below.',
+      errLocation: 'Location was not available. You can still enter your city and country.',
       errCity: 'City not found — check the spelling and country name.',
       next: 'NEXT',
       sunrise: 'Sunrise ☀️',
@@ -81,6 +88,11 @@ export const ui = {
   },
 
   bg: {
+    brand: {
+      main: 'Намаз',
+      accent: ' Ръководство',
+      full: 'Намаз Ръководство',
+    },
     nav: {
       basics: 'Преди намаза',
       purity: 'Чистота',
@@ -146,13 +158,15 @@ export const ui = {
     },
     pt: {
       title: '🕋 Времена за намаз днес',
-      meta: 'Разреши достъп до местоположението или въведи своя град — времената се изчисляват чрез AlAdhan API (метод на Muslim World League).',
+      meta: '?????? ???? ??? ????????? ???????? ?? ?????????????? ???? ?????? ??????? ? ????????? ?? ?????????? ???? AlAdhan API (????? ?? Muslim World League).',
       yourLocation: 'Твоето местоположение',
       city: 'Град (напр. София)',
       country: 'Държава (напр. България)',
       get: 'Покажи',
+      useLocation: '????????? ???????????????? ??',
       loading: 'Зареждане…',
       errGeneric: 'Времената не можаха да се заредят. Опитай, като въведеш града си долу.',
+      errLocation: '???????????????? ?? ? ????????. ????? ?? ??????? ???? ? ??????? ?????.',
       errCity: 'Градът не е намерен — провери изписването и името на държавата.',
       next: 'СЛЕДВАЩ',
       sunrise: 'Изгрев ☀️',

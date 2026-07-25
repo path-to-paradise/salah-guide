@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useLang } from '../i18n/LanguageContext.jsx'
 
 const PRAYERS = [
@@ -57,15 +57,18 @@ export default function PrayerTimesWidget() {
     }
   }
 
-  useEffect(() => {
-    if (!navigator.geolocation) return
+  function loadMyLocation() {
+    if (!navigator.geolocation) {
+      setError(t.pt.errLocation)
+      return
+    }
+    setError('')
     navigator.geolocation.getCurrentPosition(
       (pos) => loadByCoords(pos.coords.latitude, pos.coords.longitude),
-      () => {}, // declined — user can type a city instead
+      () => setError(t.pt.errLocation),
       { timeout: 8000 },
     )
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }
 
   // Find the next upcoming prayer (Sunrise excluded — it is not a prayer).
   let nextKey = null
@@ -104,6 +107,14 @@ export default function PrayerTimesWidget() {
           {loading ? t.pt.loading : t.pt.get}
         </button>
       </form>
+      <button
+        className="btn btn-outline pt-location-btn"
+        type="button"
+        onClick={loadMyLocation}
+        disabled={loading}
+      >
+        {t.pt.useLocation}
+      </button>
       {error && <p className="pt-error">{error}</p>}
       {times && (
         <div className="pt-grid">

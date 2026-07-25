@@ -43,7 +43,7 @@ export default function Navbar() {
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
           <span className="brand-mark" aria-hidden="true">🕌</span>
           <span className="brand-text">
-            Salah<span className="brand-accent">Guide</span>
+            {t.brand.main}<span className="brand-accent">{t.brand.accent}</span>
           </span>
         </Link>
         <div className="nav-controls">
