@@ -4,6 +4,7 @@ import GenderGate from './components/GenderGate.jsx'
 import PathNav from './components/PathNav.jsx'
 import Footer from './components/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import PWAUpdateToast from './components/PWAUpdateToast.jsx'
 import Home from './pages/Home.jsx'
 import Basics from './pages/Basics.jsx'
 import Purity from './pages/Purity.jsx'
@@ -37,6 +38,7 @@ function App() {
         <PathNav />
       </main>
       <Footer />
+      <PWAUpdateToast />
     </div>
   )
 }

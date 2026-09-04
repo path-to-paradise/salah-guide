@@ -2484,3 +2484,61 @@ html[lang='ur'] .section-sub {
   direction: rtl;
   text-align: right;
 }
+
+/* ===== PWA update/offline toast ===== */
+.pwa-toast {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 200;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 14px 14px 14px 18px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  animation: stepIn 0.25s ease;
+}
+
+.pwa-toast-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pwa-toast .btn {
+  padding: 9px 16px;
+  font-size: 0.86rem;
+}
+
+.pwa-toast-close {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.pwa-toast-close:hover {
+  background: var(--green-tint);
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pwa-toast {
+    animation: none;
+  }
+}
