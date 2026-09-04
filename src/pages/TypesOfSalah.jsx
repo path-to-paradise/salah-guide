@@ -21,16 +21,16 @@ const C = {
   },
   fr: {
     title: 'Types de Salah',
-    lead: "« Je n'ai créé les djinns et les hommes que pour qu'ils M'adorent. » (Coran 51:56). Au-delà des cinq prières quotidiennes s'étend tout un monde d'adoration — de la Jumu'ah obligatoire à la prière de nuit, la prière du repentir et la prière de consultation (Istikhara). Chaque prière ci-dessous inclut un guide complet étape par étape — ouvrez le panneau 📋 dans sa carte.",
+    lead: "« Je n'ai créé les djinns et les hommes que pour qu'ils M'adorent. » (Coran 51:56). Au-delà des cinq prières quotidiennes s'étend tout un monde d'adoration — de la Jumu'ah obligatoire à la prière de nuit, la prière du repentir et la prière de consultation (Istikhara). Chaque prière ci-dessous inclut un guide complet étape par étape — ouvre le panneau 📋 dans sa carte.",
     wtHint: 'Tous les textes de récitation (Fatiha, tachahhud, qunut, invocation de l\'istikhara…) se trouvent sur la page Invocations et Sourates ; les positions sont illustrées sur la page Comment prier.',
-    jumuahMale: '👨 Pour vous : la Jumu\'ah est obligatoire — vous êtes un homme adulte. Prenez-la au sérieux : « Quiconque délaisse trois Jumu\'ah par négligence, Allah scelle son cœur. » (Sunan Abi Dawud 1052)',
-    jumuahFemale: '🧕 Pour vous : la Jumu\'ah n\'est pas obligatoire pour les femmes — vous priez plutôt le Dhuhr (4 rak\'ahs) à son heure normale. Si vous assistez tout de même à la prière de Jumu\'ah, elle compte à la place du Dhuhr.',
+    jumuahMale: '👨 Pour toi : la Jumu\'ah est obligatoire — tu es un homme adulte. Prends-la au sérieux : « Quiconque délaisse trois Jumu\'ah par négligence, Allah scelle son cœur. » (Sunan Abi Dawud 1052)',
+    jumuahFemale: '🧕 Pour toi : la Jumu\'ah n\'est pas obligatoire pour les femmes — tu pries plutôt le Dhuhr (4 rak\'ahs) à son heure normale. Si tu assistes tout de même à la prière de Jumu\'ah, elle compte à la place du Dhuhr.',
   },
   de: {
     title: 'Arten des Salah',
-    lead: '„Und Ich habe die Dschinn und die Menschen nur dazu geschaffen, dass sie Mir dienen." (Koran 51:56). Jenseits der fünf täglichen Gebete liegt eine ganze Welt der Anbetung — vom verpflichtenden Jumu\'ah bis zum Nachtgebet, dem Gebet der Reue und dem Gebet um Rechtleitung. Jedes Gebet unten enthält eine vollständige Schritt-für-Schritt-Anleitung — öffne das 📋-Feld in der jeweiligen Karte.',
-    wtHint: 'Alle Rezitationstexte (Fatiha, Taschahhud, Qunut, Istikhara-Dua …) findest du auf der Seite „Bittgebete & Suren"; die Körperhaltungen sind auf „Wie man betet" illustriert.',
-    jumuahMale: '👨 Für dich: Jumu\'ah ist verpflichtend — du bist ein erwachsener Mann. Nimm es ernst: „Wer aus Nachlässigkeit drei Jumu\'ahs auslässt, dessen Herz versiegelt Allah." (Sunan Abi Dawud 1052)',
+    lead: '„Und Ich habe die Dschinn und die Menschen nur dazu geschaffen, dass sie Mir dienen.“ (Koran 51:56). Jenseits der fünf täglichen Gebete liegt eine ganze Welt der Anbetung — vom verpflichtenden Jumu\'ah bis zum Nachtgebet, dem Gebet der Reue und dem Gebet um Rechtleitung. Jedes Gebet unten enthält eine vollständige Schritt-für-Schritt-Anleitung — öffne das 📋-Feld in der jeweiligen Karte.',
+    wtHint: 'Alle Rezitationstexte (Fatiha, Taschahhud, Qunut, Istikhara-Dua …) findest du auf der Seite „Bittgebete & Suren“; die Körperhaltungen sind auf „Wie man betet“ illustriert.',
+    jumuahMale: '👨 Für dich: Jumu\'ah ist verpflichtend — du bist ein erwachsener Mann. Nimm es ernst: „Wer aus Nachlässigkeit drei Jumu\'ahs auslässt, dessen Herz versiegelt Allah.“ (Sunan Abi Dawud 1052)',
     jumuahFemale: '🧕 Für dich: Jumu\'ah ist für Frauen nicht verpflichtend — du betest stattdessen das Dhuhr (4 Rak\'ahs) zu seiner gewohnten Zeit. Nimmst du dennoch am Jumu\'ah-Gebet teil, zählt es anstelle des Dhuhr.',
   },
   nl: {
@@ -42,10 +42,10 @@ const C = {
   },
   tr: {
     title: 'Namaz Çeşitleri',
-    lead: '"Ben cinleri ve insanları, ancak bana kulluk etsinler diye yarattım." (Kur\'an 51:56). Beş vakit namazın ötesinde koca bir ibadet dünyası var — farz olan Cuma namazından gece namazına, tevbe namazına ve istihare namazına kadar. Aşağıdaki her namaz, tam bir adım adım rehber içerir — kartın içindeki 📋 panelini açın.',
+    lead: '"Ben cinleri ve insanları, ancak bana kulluk etsinler diye yarattım." (Kur\'an 51:56). Beş vakit namazın ötesinde koca bir ibadet dünyası var — farz olan Cuma namazından gece namazına, tevbe namazına ve istihare namazına kadar. Aşağıdaki her namaz, tam bir adım adım rehber içerir — kartın içindeki 📋 panelini aç.',
     wtHint: 'Tüm okuma metinleri (Fatiha, teşehhüd, kunut, istihare duası…) Dualar ve Sureler sayfasında bulunur; duruşlar Nasıl Namaz Kılınır sayfasında gösterilmiştir.',
-    jumuahMale: '👨 Sizin için: Cuma namazı farzdır — siz yetişkin bir erkeksiniz. Bunu ciddiye alın: "Kim ihmalinden dolayı üç Cuma namazını terk ederse, Allah onun kalbini mühürler." (Sünen Ebu Davud 1052)',
-    jumuahFemale: '🧕 Sizin için: Cuma namazı kadınlar için farz değildir — bunun yerine normal vaktinde Öğle namazını (4 rekat) kılarsınız. Yine de Cuma namazına katılırsanız, bu Öğle namazının yerine geçer.',
+    jumuahMale: '👨 Senin için: Cuma namazı farzdır — sen yetişkin bir erkeksin. Bunu ciddiye al: "Kim ihmalinden dolayı üç Cuma namazını terk ederse, Allah onun kalbini mühürler." (Sünen Ebu Davud 1052)',
+    jumuahFemale: '🧕 Senin için: Cuma namazı kadınlar için farz değildir — bunun yerine normal vaktinde Öğle namazını (4 rekat) kılarsın. Yine de Cuma namazına katılırsan, bu Öğle namazının yerine geçer.',
   },
   ur: {
     title: 'نماز کی اقسام',

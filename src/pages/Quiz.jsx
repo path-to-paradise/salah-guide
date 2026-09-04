@@ -40,9 +40,9 @@ const C = {
     },
   },
   fr: {
-    title: 'Testez-vous',
+    title: 'Teste-toi',
     lead: (n) =>
-      `${n} questions du débutant à l'expert. Chaque réponse est accompagnée de sa preuve — ainsi, même une mauvaise réponse vous apprend quelque chose.`,
+      `${n} questions du débutant à l'expert. Chaque réponse est accompagnée de sa preuve — ainsi, même une mauvaise réponse t'apprend quelque chose.`,
     question: 'Question',
     of: 'sur',
     score: 'Score',
@@ -51,10 +51,10 @@ const C = {
     nextQ: 'Question suivante →',
     tryAgain: 'Réessayer',
     grades: {
-      perfect: "Score parfait — machaAllah, vous maîtrisez votre Salah !",
-      great: "Excellent — encore un peu de révision et vous saurez tout.",
-      good: 'Bon début — revoyez les pages Comment prier et Types et réessayez.',
-      begin: "Chaque expert a été un jour débutant — parcourez le parcours d'apprentissage depuis l'étape 1 et revenez !",
+      perfect: "Score parfait — machaAllah, tu maîtrises ta Salah !",
+      great: "Excellent — encore un peu de révision et tu sauras tout.",
+      good: 'Bon début — revois les pages Comment prier et Types, puis réessaie.',
+      begin: "Chaque expert a été un jour débutant — parcours le chemin d'apprentissage depuis l'étape 1 et reviens !",
     },
   },
   de: {
@@ -71,7 +71,7 @@ const C = {
     grades: {
       perfect: "Perfekte Punktzahl — maschaAllah, du kennst dich mit deinem Salah aus!",
       great: "Ausgezeichnet — ein wenig Wiederholung und du hast alles drauf.",
-      good: 'Guter Anfang — schau dir die Seiten „Wie man betet" und „Arten" noch einmal an und versuch es erneut.',
+      good: 'Guter Anfang — schau dir die Seiten „Wie man betet“ und „Arten“ noch einmal an und versuch es erneut.',
       begin: 'Jeder Experte war einmal Anfänger — geh die Lernreise ab Schritt 1 durch und komm zurück!',
     },
   },
@@ -96,7 +96,7 @@ const C = {
   tr: {
     title: 'Kendini Test Et',
     lead: (n) =>
-      `Başlangıçtan uzmana kadar ${n} soru. Her cevap kendi delili ile birlikte gelir — böylece yanlış bir tahmin bile size bir şey öğretir.`,
+      `Başlangıçtan uzmana kadar ${n} soru. Her cevap kendi delili ile birlikte gelir — böylece yanlış bir tahmin bile sana bir şey öğretir.`,
     question: 'Soru',
     of: '/',
     score: 'Puan',

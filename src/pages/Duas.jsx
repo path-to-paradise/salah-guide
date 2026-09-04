@@ -33,7 +33,7 @@ const C = {
     },
   },
   fr: {
-    title: 'Duas et sourates pour la Salah',
+    title: 'Douas et sourates pour la Salah',
     lead: "« Invoquez-Moi, Je vous répondrai. » (Coran 40:60). Toute récitation dont tu as besoin pour la prière — en arabe, avec translittération, traduction et sa source authentique.",
     subs: {
       'in-prayer':
@@ -43,7 +43,7 @@ const C = {
       'after-prayer':
         'Les adhkar sunnah dits après le tasleem — quelques minutes qui portent une récompense immense.',
       special:
-        'Duas pour des prières et occasions spécifiques — Witr, Istikhara, repentir et entrée à la mosquée.',
+        'Douas pour des prières et occasions spécifiques — Witr, Istikhara, repentir et entrée à la mosquée.',
     },
   },
   de: {

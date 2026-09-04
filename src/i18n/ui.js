@@ -475,7 +475,7 @@ export const ui = {
     footer: {
       blurb:
         'İlk namazından ileri düzey hükümlere kadar, namaz kılmak için bilmen gereken her şeyi kapsayan ücretsiz bir öğrenme kaynağı.',
-      note: 'Bu site eğitim amaçlıdır. Kişisel dini sorularınız için lütfen yetkin bir alim ile görüşün.',
+      note: 'Bu site eğitim amaçlıdır. Kişisel dini soruların için lütfen yetkin bir alim ile görüş.',
       learn: 'Öğren',
       sources: 'Kullanılan güvenilir kaynaklar',
       quran: "Quran.com — Kur'an metni ve çevirisi",
@@ -518,7 +518,7 @@ export const ui = {
       title: 'Cinsiyetini seç',
       male: 'Erkek',
       female: 'Kadın',
-      switchTitle: 'Şunun için gösterilen rehberlik',
+      switchTitle: 'Gösterilen rehberlik',
       maleShort: 'Erkek',
       femaleShort: 'Kadın',
     },

@@ -42,7 +42,7 @@ export const stations = [
     icon: '🕐',
     desc: {
       en: "Fajr to Isha — the times, the rak'ahs, and live prayer times for your city.",
-      bg: 'От Фаджр до Иша — времената, рекятите и живи времена за твоя град.',
+      bg: 'От Фаджр до Иша — времената, рекятите и актуалните намазни часове за твоя град.',
       fr: 'De Fajr à Isha — les horaires, les rak\'ahs, et les horaires de prière en direct pour ta ville.',
       de: 'Von Fajr bis Isha – die Zeiten, die Rak\'ahs und aktuelle Gebetszeiten für deine Stadt.',
       nl: 'Van Fajr tot Isha — de tijden, de rak\'ahs, en actuele gebedstijden voor jouw stad.',
@@ -97,7 +97,7 @@ export const stations = [
       tr: 'Farz, vacip, sünnet ve nafile — her namaz için tam bir anlatımla.',
       ur: 'فرض، واجب، سنت اور نفل — ہر نماز کے لیے مکمل رہنمائی کے ساتھ۔',
     },
-    level: { en: 'Intermediate', bg: 'Средно ниво', fr: 'Intermédiaire', de: 'Mittelstufe', nl: 'Gemiddeld', tr: 'Orta seviye', ur: 'درمیانہ' },
+    level: { en: 'Intermediate', bg: 'Средно ниво', fr: 'Intermédiaire', de: 'Mittelstufe', nl: 'Gemiddeld', tr: 'Orta Seviye', ur: 'درمیانہ' },
   },
   {
     key: 'beyond',
@@ -113,7 +113,7 @@ export const stations = [
       tr: 'Yolculuk, hastalık, kaçırılan namazlar, hataları düzeltme ve huşu.',
       ur: 'سفر، بیماری، چھوٹی ہوئی نمازیں، غلطیوں کی اصلاح، اور خشوع۔',
     },
-    level: { en: 'Advanced', bg: 'Напреднал', fr: 'Avancé', de: 'Fortgeschritten', nl: 'Gevorderd', tr: 'İleri seviye', ur: 'اعلیٰ' },
+    level: { en: 'Advanced', bg: 'Напреднал', fr: 'Avancé', de: 'Fortgeschritten', nl: 'Gevorderd', tr: 'İleri Seviye', ur: 'اعلیٰ' },
   },
   {
     key: 'quiz',

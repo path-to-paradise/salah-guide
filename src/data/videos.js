@@ -17,7 +17,7 @@ export const videos = {
         en: 'A complete walk-through of every position and dua of the prayer.',
         bg: 'Пълно преминаване през всяко положение и дуа на намаза.',
         fr: 'Un guide complet de chaque position et dua de la prière.',
-        de: 'Eine vollständige Anleitung zu jeder Position und jedem Dua des Gebets.',
+        de: 'Eine vollständige Anleitung zu jeder Position und jeder Dua des Gebets.',
         nl: 'Een volledige uitleg van elke positie en dua van het gebed.',
         tr: 'Namazın her pozisyonu ve duası için tam bir anlatım.',
         ur: 'نماز کی ہر حالت اور دعا کا مکمل جائزہ۔',

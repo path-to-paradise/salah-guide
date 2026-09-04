@@ -139,7 +139,7 @@ const topics = [
       tr: [
         '"Kim bir namazı unutur veya uyuyakalıp kaçırırsa, onun kefareti, hatırladığı an onu kılmasıdır." (Sahih Muslim 684)',
         'Uyku veya gerçek unutkanlık nedeniyle kaçırılan: hatırlar hatırlamaz hemen kıl — onun vakti odur ve günah yoktur.',
-        "Kasten kaçırılan: bu, samimi bir tövbe gerektiren ciddi bir meseledir. Âlimlerin çoğunluğu yine de kaza edilmesi gerektiğini kabul eder; bugünden itibaren vaktinde kılmaya başla ve gönüllü tövbenin yanında kaza namazlarını da ekle (Namaz Türleri'nde Salat at-Tevbe'ye bakınız).",
+        "Kasten kaçırılan: bu, samimi bir tövbe gerektiren ciddi bir meseledir. Âlimlerin çoğunluğu yine de kaza edilmesi gerektiğini kabul eder; bugünden itibaren vaktinde kılmaya başla ve gönüllü tövbenin yanında kaza namazlarını da ekle (Namaz Türleri'nde Tövbe namazı'na bak).",
       ],
       ur: [
         '"جو شخص کوئی نماز بھول جائے یا اس میں سویا رہ جائے، اس کا کفارہ یہ ہے کہ جب یاد آئے اسی وقت پڑھ لے۔" (صحیح مسلم 684)',
@@ -156,7 +156,7 @@ const topics = [
       fr: 'Corriger les erreurs — Sujud as-Sahw',
       de: 'Fehler korrigieren — Sujud as-Sahw',
       nl: 'Fouten herstellen — Sujud as-Sahw',
-      tr: 'Hataları düzeltmek — Secde-i Sehiv',
+      tr: 'Hataları düzeltmek — Sehiv Secdesi',
       ur: 'غلطیوں کی اصلاح — سجدہ سہو',
     },
     body: {
@@ -241,7 +241,7 @@ const topics = [
       ],
       ur: [
         '"جماعت کی نماز اکیلے پڑھی گئی نماز سے ستائیس درجے افضل ہے۔" (صحیح البخاری 645)',
-        'صفیں سیدھی اور خالی جگہیں پُر ہوتی ہیں؛ مقتدی وہی کرتا ہے جو امام کرتا ہے اور کبھی اس سے آگے نہیں بڑھتا (بخاری 722)۔ الفاتحہ کے بعد امام کے ساتھ "آمین" کہیں۔',
+        'صفیں سیدھی اور خالی جگہیں پُر ہوتی ہیں؛ مقتدی وہی کرتا ہے جو امام کرتا ہے اور کبھی اس سے آگے نہیں بڑھتا (صحیح البخاری 722)۔ الفاتحہ کے بعد امام کے ساتھ "آمین" کہیں۔',
         'دیر سے شامل ہو رہے ہیں؟ امام کے ساتھ جو بھی حصہ مل جائے وہ شمار ہوتا ہے؛ امام کے سلام کے بعد کھڑے ہو کر باقی نماز مکمل کریں۔ کسی رکعت کا رکوع مل جانا اس پوری رکعت کے ملنے کے برابر ہے (اکثریت کے مطابق)۔',
       ],
     },
@@ -264,7 +264,7 @@ const topics = [
       ],
       bg: [
         'Пророкът ﷺ кланял към сутра — предмет (стена, колона, чанта), поставен пред мястото на седжде — и наставлявал да се кланя към такава (Сунен Еби Дауд 689).',
-        'Тя очертава пространството на намаза ти, за да могат хората да минават отвъд нея, без да смущават молитвата.',
+        'Тя очертава пространството на намаза ти, за да могат хората да минават отвъд нея, без да го смущават.',
       ],
       fr: [
         "Le Prophète ﷺ priait en direction d'une sutrah — un objet (mur, pilier, sac) placé devant l'endroit du sujud — et il ordonnait de prier en direction d'une sutrah (Sunan Abi Dawud 689).",
@@ -431,7 +431,7 @@ const C = {
     title: 'Verder dan de basis',
     lead: '„Allah wil voor jullie het gemakkelijke en wil voor jullie niet het moeilijke.” (Koran 2:185). Het echte leven gebeurt — reizen, ziekte, fouten, gemiste wekkers. De Sharia heeft voor elk daarvan een barmhartig antwoord.',
     fiqhTitle: '📚 Een opmerking over de fiqh-scholen',
-    fiqh: "Details zoals waar je de handen plaatst, of of Witr wajib of sunnah is, verschillen tussen de vier scholen (Hanafi, Maliki, Shafi'i, Hanbali) — allemaal via geldige geleerdheid terug te voeren op de Sunnah. Deze site presenteert breed gedragen standpunten met hun bewijzen; waar jouw lokale gemeenschap of school op een detail verschilt, volg dan met vertrouwen je geleerden. De verschillen zijn een barmhartigheid, geen tegenspraak.",
+    fiqh: "Details zoals waar je de handen plaatst, of dat Witr wajib of sunnah is, verschillen tussen de vier scholen (Hanafi, Maliki, Shafi'i, Hanbali) — allemaal via geldige geleerdheid terug te voeren op de Sunnah. Deze site presenteert breed gedragen standpunten met hun bewijzen; waar jouw lokale gemeenschap of school op een detail verschilt, volg dan met vertrouwen je geleerden. De verschillen zijn een barmhartigheid, geen tegenspraak.",
   },
   tr: {
     title: 'Temellerin Ötesinde',
