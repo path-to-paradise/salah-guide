@@ -196,12 +196,14 @@ export default function Quiz() {
             </div>
           ) : (
             <div className="quiz-q">
-              <span className={`badge ${q.level === 'Beginner' ? 'badge-sunnah' : q.level === 'Intermediate' ? 'badge-wajib' : 'badge-fard'}`}>
-                {L(quizLevels[q.level])}
-              </span>
-              <span style={{ float: 'right', color: 'var(--muted)', fontSize: '0.88rem' }}>
-                {c.question} {i + 1} {c.of} {quizQuestions.length} · {c.score} {score}
-              </span>
+              <div className="quiz-q-meta">
+                <span className={`badge ${q.level === 'Beginner' ? 'badge-sunnah' : q.level === 'Intermediate' ? 'badge-wajib' : 'badge-fard'}`}>
+                  {L(quizLevels[q.level])}
+                </span>
+                <span className="quiz-q-progress">
+                  {c.question} {i + 1} {c.of} {quizQuestions.length} · {c.score} {score}
+                </span>
+              </div>
               <h3>{L(q.q)}</h3>
               <div className="quiz-options">
                 {L(q.options).map((opt, idx) => {

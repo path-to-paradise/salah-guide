@@ -2,7 +2,7 @@
 :root {
   --ink: #14261f;
   --ink-soft: #3d5249;
-  --muted: #64756d;
+  --muted: #55635d;
   --bg: #f7f4ec;
   --card: #ffffff;
   --line: #e5decd;
@@ -11,7 +11,7 @@
   --green-deep: #072e23;
   --green-tint: #e3efe8;
   --gold: #c8a24b;
-  --gold-dark: #a5813a;
+  --gold-dark: #7c612c;
   --gold-soft: #f5ecd7;
   --radius: 14px;
   --shadow: 0 2px 10px rgba(7, 46, 35, 0.07);
@@ -25,7 +25,7 @@
 :root[data-gender='female'] {
   --ink: #2b1f26;
   --ink-soft: #55414c;
-  --muted: #7a6570;
+  --muted: #6e5b65;
   --bg: #faf4f3;
   --line: #ecdad6;
   --green: #9c3d68;
@@ -33,7 +33,7 @@
   --green-deep: #4a1b33;
   --green-tint: #f7e6ef;
   --gold: #d29a63;
-  --gold-dark: #a9713d;
+  --gold-dark: #875a31;
   --gold-soft: #f7ead9;
   --shadow: 0 2px 10px rgba(74, 27, 51, 0.07);
   --shadow-lg: 0 10px 30px rgba(74, 27, 51, 0.14);
@@ -201,6 +201,18 @@ select {
   gap: 10px;
 }
 
+.nav-controls-switches {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Hidden on the top bar below 900px — rendered again inside .nav-row's
+   mobile drawer (.mobile-switches) so the top row stays to brand + hamburger. */
+.mobile-switches {
+  display: none;
+}
+
 .lang-switch {
   display: flex;
   border: 1.5px solid rgba(255, 255, 255, 0.28);
@@ -217,7 +229,8 @@ select {
   font-weight: 700;
   font-size: 0.82rem;
   line-height: 1.4;
-  padding: 7px 13px;
+  min-height: 44px;
+  padding: 7px 16px;
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
 }
@@ -240,7 +253,8 @@ select {
   font-weight: 700;
   font-size: 0.82rem;
   line-height: 1.4;
-  padding: 7px 10px;
+  min-height: 44px;
+  padding: 7px 14px;
   cursor: pointer;
   transition: background 0.15s;
 }
@@ -362,12 +376,22 @@ select {
   .nav-toggle {
     display: block;
   }
+  .nav-controls-switches {
+    display: none;
+  }
   .nav-row {
     display: none;
   }
   .nav-row.open {
     display: block;
     animation: stepIn 0.22s ease;
+  }
+  .mobile-switches {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 14px 4px;
   }
   .nav-links {
     flex-direction: column;
@@ -493,10 +517,10 @@ select {
     grid-template-columns: 1fr;
   }
   .hero-art {
-    order: -1;
+    margin-top: 8px;
   }
   .hero-art svg {
-    max-width: 240px;
+    max-width: 180px;
   }
 }
 
@@ -568,7 +592,7 @@ a.card:hover {
 }
 
 .badge-fard { background: #fde8e4; color: #a2402c; }
-.badge-wajib { background: #fdf3dd; color: #8f6a1c; }
+.badge-wajib { background: #fdf3dd; color: #815f19; }
 .badge-sunnah { background: var(--green-tint); color: var(--green-dark); }
 .badge-nafl { background: #e6ecf7; color: #33518d; }
 
@@ -776,8 +800,8 @@ a.card:hover {
 }
 
 .step-dot {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 2px solid var(--line);
   background: var(--card);
@@ -996,6 +1020,13 @@ a.card:hover {
   }
 }
 
+@media (max-width: 1000px) {
+  .step-body {
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+  }
+}
+
 @media (max-width: 760px) {
   .step-body {
     grid-template-columns: 1fr;
@@ -1093,11 +1124,28 @@ a.card:hover {
 
 /* ===== tables ===== */
 .table-wrap {
+  position: relative;
   overflow-x: auto;
   border-radius: var(--radius);
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
   background: var(--card);
+}
+
+/* Edge fade hints that the table scrolls sideways — table.nice has a
+   min-width, so on narrow screens it almost always overflows here. */
+@media (max-width: 900px) {
+  .table-wrap::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    background: linear-gradient(to right, transparent, rgba(20, 38, 31, 0.14));
+    pointer-events: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
 }
 
 table.nice {
@@ -1288,13 +1336,14 @@ button.video-poster {
 }
 
 .pt-form input {
-  padding: 11px 14px;
+  padding: 13px 14px;
   border-radius: 9px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   font-family: var(--font-ui);
   font-size: 0.95rem;
+  min-height: 44px;
   min-width: 150px;
   flex: 1;
 }
@@ -1365,6 +1414,19 @@ button.video-poster {
 .quiz-q h3 {
   font-size: 1.25rem;
   margin: 8px 0 20px;
+}
+
+.quiz-q-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quiz-q-progress {
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .quiz-options {
@@ -1615,6 +1677,12 @@ button.video-poster {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1.2fr;
   gap: 36px;
+}
+
+@media (max-width: 1000px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 760px) {
@@ -2045,11 +2113,6 @@ button.video-poster {
     display: none;
   }
 
-  .step-dot {
-    width: 34px;
-    height: 34px;
-  }
-
   .path-nav {
     align-items: stretch;
   }
@@ -2291,7 +2354,7 @@ button.video-poster {
   }
 
   .hero-art svg {
-    max-width: 205px;
+    max-width: 150px;
   }
 
   .btn {
@@ -2304,12 +2367,6 @@ button.video-poster {
 
   .gender-btns {
     grid-template-columns: 1fr;
-  }
-
-  .quiz-q [style*='float'] {
-    float: none !important;
-    display: block;
-    margin-top: 8px;
   }
 }
 

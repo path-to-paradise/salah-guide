@@ -37,6 +37,41 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
+  const switches = (
+    <>
+      <div className="lang-switch" role="group" aria-label={t.gender.switchTitle}>
+        <button
+          className={gender === 'male' ? 'active' : ''}
+          onClick={() => setGender('male')}
+          aria-pressed={gender === 'male'}
+          title={`${t.gender.switchTitle}: ${t.gender.maleShort}`}
+        >
+          👨
+        </button>
+        <button
+          className={gender === 'female' ? 'active' : ''}
+          onClick={() => setGender('female')}
+          aria-pressed={gender === 'female'}
+          title={`${t.gender.switchTitle}: ${t.gender.femaleShort}`}
+        >
+          🧕
+        </button>
+      </div>
+      <select
+        className="lang-select"
+        aria-label="Language"
+        value={lang}
+        onChange={(e) => setLang(e.target.value)}
+      >
+        {LANGS.map((l) => (
+          <option key={l.code} value={l.code}>
+            {l.flag} {l.short}
+          </option>
+        ))}
+      </select>
+    </>
+  )
+
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-top">
@@ -47,36 +82,7 @@ export default function Navbar() {
           </span>
         </Link>
         <div className="nav-controls">
-          <div className="lang-switch" role="group" aria-label={t.gender.switchTitle}>
-            <button
-              className={gender === 'male' ? 'active' : ''}
-              onClick={() => setGender('male')}
-              aria-pressed={gender === 'male'}
-              title={`${t.gender.switchTitle}: ${t.gender.maleShort}`}
-            >
-              👨
-            </button>
-            <button
-              className={gender === 'female' ? 'active' : ''}
-              onClick={() => setGender('female')}
-              aria-pressed={gender === 'female'}
-              title={`${t.gender.switchTitle}: ${t.gender.femaleShort}`}
-            >
-              🧕
-            </button>
-          </div>
-          <select
-            className="lang-select"
-            aria-label="Language"
-            value={lang}
-            onChange={(e) => setLang(e.target.value)}
-          >
-            {LANGS.map((l) => (
-              <option key={l.code} value={l.code}>
-                {l.flag} {l.short}
-              </option>
-            ))}
-          </select>
+          <div className="nav-controls-switches">{switches}</div>
           <button
             className={`nav-toggle ${open ? 'open' : ''}`}
             aria-label="Toggle menu"
@@ -90,6 +96,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className={`nav-row ${open ? 'open' : ''}`}>
+        <div className="mobile-switches">{switches}</div>
         <nav className="nav-links">
           {routes.map((r) => (
             <NavLink
