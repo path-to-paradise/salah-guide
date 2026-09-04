@@ -1,8 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { editPageUrl, newIssueUrl } from '../lib/github.js'
 
 export default function Footer() {
   const { t } = useLang()
+  const { pathname } = useLocation()
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -37,6 +39,15 @@ export default function Footer() {
             rel="noreferrer"
           >
             {t.footer.mymasjid}
+          </a>
+        </div>
+        <div className="footer-col">
+          <h4>{t.footer.contribute}</h4>
+          <a href={editPageUrl(pathname)} target="_blank" rel="noreferrer">
+            ✏️ {t.footer.suggestEdit}
+          </a>
+          <a href={newIssueUrl(pathname)} target="_blank" rel="noreferrer">
+            🚩 {t.footer.reportIssue}
           </a>
         </div>
       </div>

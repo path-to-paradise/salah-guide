@@ -1774,7 +1774,7 @@ button.video-poster {
   margin: 0 auto;
   padding: 48px 20px 28px;
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1.2fr;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
   gap: 36px;
 }
 

@@ -119,6 +119,10 @@ Analytics (see `src/lib/analytics.js` and `src/components/Analytics.jsx`) is opt
 
 The site builds to a static `dist/` folder (`npm run build`) and can be hosted anywhere that serves static files with SPA-style routing fallback (unmatched routes → `index.html`) — the production deployment runs on **Cloudflare Pages**. Remember to set `VITE_GA_MEASUREMENT_ID` in the platform's environment variables (not just locally) if you want analytics on the deployed site.
 
+## Contributing
+
+Found a mistake — a typo, a broken link, an awkward translation, something factually off? Every page has a **Suggest an edit** link in the footer that opens the relevant file directly on GitHub (forks and opens a pull request for you automatically). See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow, including how to run the site locally for bigger changes and where each kind of content actually lives. Pull requests are reviewed by the maintainer; once approved and merged into `main`, the site redeploys automatically.
+
 ## Disclaimer
 
 This site is for education. For rulings on your personal situation, please consult a qualified local scholar.

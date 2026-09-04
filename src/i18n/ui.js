@@ -29,6 +29,9 @@ export const ui = {
       mymasjid: "MyMasjid — Beginner's guide to Salah",
       bottom:
         "Qur'an translations follow Saheeh International. Hadith are cited from Sahih al-Bukhari, Sahih Muslim and the Sunan collections via sunnah.com.",
+      contribute: 'Contribute',
+      suggestEdit: 'Found a mistake? Suggest an edit',
+      reportIssue: 'Report an issue',
     },
     common: {
       source: 'Source',
@@ -125,6 +128,9 @@ export const ui = {
       mymasjid: 'MyMasjid — ръководство за начинаещи',
       bottom:
         'Преводите на Корана следват Saheeh International (на английски) и утвърдени български преводи по смисъл. Хадисите са цитирани от Сахих ал-Бухари, Сахих Муслим и сборниците Сунен чрез sunnah.com.',
+      contribute: 'Приноси',
+      suggestEdit: 'Забеляза грешка? Предложи корекция',
+      reportIssue: 'Докладвай проблем',
     },
     common: {
       source: 'Източник',
@@ -221,6 +227,9 @@ export const ui = {
       mymasjid: 'MyMasjid — guide du débutant pour la Salah',
       bottom:
         "Les traductions du Coran suivent Saheeh International. Les hadiths sont cités de Sahih al-Bukhari, Sahih Muslim et les recueils Sunan via sunnah.com.",
+      contribute: 'Contribuer',
+      suggestEdit: 'Tu as trouvé une erreur ? Propose une modification',
+      reportIssue: 'Signaler un problème',
     },
     common: {
       source: 'Source',
@@ -317,6 +326,9 @@ export const ui = {
       mymasjid: 'MyMasjid — Leitfaden für Anfänger zum Salah',
       bottom:
         'Koranübersetzungen folgen Saheeh International. Hadithe werden aus Sahih al-Bukhari, Sahih Muslim und den Sunan-Sammlungen über sunnah.com zitiert.',
+      contribute: 'Mitwirken',
+      suggestEdit: 'Einen Fehler gefunden? Änderung vorschlagen',
+      reportIssue: 'Problem melden',
     },
     common: {
       source: 'Quelle',
@@ -413,6 +425,9 @@ export const ui = {
       mymasjid: 'MyMasjid — beginnersgids voor Salah',
       bottom:
         'Koranvertalingen volgen Saheeh International. Hadith wordt geciteerd uit Sahih al-Bukhari, Sahih Muslim en de Sunan-verzamelingen via sunnah.com.',
+      contribute: 'Bijdragen',
+      suggestEdit: 'Fout gevonden? Stel een wijziging voor',
+      reportIssue: 'Probleem melden',
     },
     common: {
       source: 'Bron',
@@ -509,6 +524,9 @@ export const ui = {
       mymasjid: 'MyMasjid — Namaz için başlangıç rehberi',
       bottom:
         "Kur'an çevirileri Saheeh International'ı takip eder. Hadisler sunnah.com üzerinden Sahih el-Buhari, Sahih Müslim ve Sünen koleksiyonlarından alıntılanmıştır.",
+      contribute: 'Katkıda bulun',
+      suggestEdit: 'Bir hata mı gördün? Düzenleme öner',
+      reportIssue: 'Sorun bildir',
     },
     common: {
       source: 'Kaynak',
@@ -605,6 +623,9 @@ export const ui = {
       mymasjid: 'MyMasjid — نماز کے لیے ابتدائی رہنما',
       bottom:
         'قرآن کے تراجم Saheeh International کی پیروی کرتے ہیں۔ احادیث sunnah.com کے ذریعے صحیح البخاری، صحیح مسلم اور سنن کے مجموعوں سے نقل کی گئی ہیں۔',
+      contribute: 'حصہ لیں',
+      suggestEdit: 'کوئی غلطی نظر آئی؟ ترمیم تجویز کریں',
+      reportIssue: 'مسئلہ رپورٹ کریں',
     },
     common: {
       source: 'ماخذ',
