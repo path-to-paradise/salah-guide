@@ -53,6 +53,121 @@ const C = {
       body: 'Твоят намаз е еднакъв с този на мъжете във всяка дума, движение и рекят. Облекло: покрий всичко освен лицето и дланите — включително косата — със свободни, непрозрачни дрехи (Сунен Еби Дауд 641). Намазът у дома е напълно валиден и обичан; джамията също е твое право. По време на месечен цикъл и следродилно кръвотечение намазът отпада изцяло и не се наваксва (Сахих ал-Бухари 321). Джума не е задължителна за теб — вместо нея кланяш Зухр, но си добре дошла да присъстваш.',
     },
   },
+  fr: {
+    title: 'Comment prier, étape par étape',
+    lead: "« Priez comme vous m'avez vu prier. » (Sahih al-Bukhari 631). Parcours chaque mouvement et chaque parole ci-dessous — prends ton temps, une étape à la fois.",
+    guideEyebrow: 'Guide interactif',
+    guideTitle: 'La prière, du takbir au salam',
+    guideSub: "Utilise le bouton Suivant (ou la barre de progression) pour avancer dans les étapes. Ensemble, les étapes 3 à 8 forment un rak'ah — l'unité qui se répète dans chaque prière.",
+    fullTitle: "🧭 Assembler une prière complète (exemple : Fajr, 2 rak'ahs)",
+    full: "Takbir → Fatiha + sourate → ruku → se relever → 2 sujouds → se relever pour le rak'ah 2 → Fatiha + sourate → ruku → se relever → 2 sujouds → s'asseoir : tashahhud + salawat + doua → salam. Pour les prières de 3 ou 4 rak'ahs, assieds-toi pour le premier tashahhud après le rak'ah 2, puis continue (en récitant uniquement Al-Fatiha aux rak'ahs 3-4) et termine par l'assise complète à la fin.",
+    watchEyebrow: 'Regarde & imite',
+    watchTitle: 'Guides vidéo',
+    watchSub: 'Voir la prière exécutée fait que tout devient clair. Ces leçons intégrées parcourent l\'ensemble du salah.',
+    fatihaEyebrow: 'Apprends les mots',
+    fatihaTitle: 'Maîtrise Al-Fatiha',
+    fatihaSub: "Al-Fatiha est récitée à chaque rak'ah — ces vidéos mot à mot te permettront de la réciter avec assurance.",
+    maleNote: {
+      title: '👨 Pour toi en tant qu\'homme',
+      body: "Tenue : couvre au minimum du nombril aux genoux, et les épaules si possible (Sahih al-Bukhari 359). Efforce-toi de prier les fard en congrégation à la mosquée — 27 fois la récompense (Sahih al-Bukhari 645) — et la Jumu'ah du vendredi t'est obligatoire. Quand tu diriges ou pries seul, récite à voix haute au Fajr, au Maghrib et à l'Isha.",
+    },
+    femaleNote: {
+      title: '🧕 Pour toi en tant que femme',
+      body: "Ta prière est identique à celle des hommes en chaque mot, mouvement et rak'ah. Tenue : couvre tout sauf le visage et les mains — cheveux compris — avec des vêtements amples et opaques (Sunan Abi Dawud 641). Prier à la maison est pleinement valable et aimé ; la mosquée est aussi ton droit. Pendant les menstruations et les saignements post-partum, la prière est entièrement levée et n'est pas rattrapée ensuite (Sahih al-Bukhari 321). La Jumu'ah ne t'est pas obligatoire — tu pries le Dhuhr à la place, bien que tu sois la bienvenue pour y assister.",
+    },
+  },
+  de: {
+    title: 'Wie man betet, Schritt für Schritt',
+    lead: '„Betet, wie ihr mich habt beten sehen.“ (Sahih al-Bukhari 631). Geh unten jede Bewegung und jedes Wort durch — nimm dir Zeit, Schritt für Schritt.',
+    guideEyebrow: 'Interaktive Anleitung',
+    guideTitle: 'Das Gebet, vom Takbir bis zum Salam',
+    guideSub: "Nutze den Weiter-Button (oder die Fortschrittsleiste), um dich durch die Schritte zu bewegen. Zusammen bilden die Schritte 3–8 ein rak'ah — die sich wiederholende Einheit jedes Gebets.",
+    fullTitle: "🧭 Ein komplettes Gebet zusammensetzen (Beispiel: Fajr, 2 rak'ahs)",
+    full: "Takbir → Fatiha + Sure → ruku → aufstehen → 2 sujuds → aufstehen für rak'ah 2 → Fatiha + Sure → ruku → aufstehen → 2 sujuds → hinsetzen: tashahhud + salawat + dua → salam. Bei Gebeten mit 3 oder 4 rak'ahs setzt du dich nach rak'ah 2 für den ersten tashahhud hin, machst dann weiter (in den rak'ahs 3–4 nur Al-Fatiha rezitierend) und schließt am Ende mit dem vollständigen Sitzen ab.",
+    watchEyebrow: 'Anschauen & nachahmen',
+    watchTitle: 'Videoanleitungen',
+    watchSub: 'Das Gebet ausgeführt zu sehen, lässt alles klar werden. Diese eingebetteten Lektionen führen durch das gesamte Salah.',
+    fatihaEyebrow: 'Lerne die Worte',
+    fatihaTitle: 'Al-Fatiha meistern',
+    fatihaSub: "Al-Fatiha wird in jedem rak'ah rezitiert — diese Wort-für-Wort-Videos bringen dich dazu, sie sicher zu rezitieren.",
+    maleNote: {
+      title: '👨 Für dich als Mann',
+      body: "Kleidung: bedecke mindestens vom Nabel bis zu den Knien, und wenn möglich die Schultern (Sahih al-Bukhari 359). Bemühe dich, die fard in der Gemeinschaft in der Moschee zu beten — 27-facher Lohn (Sahih al-Bukhari 645) — und die Jumu'ah am Freitag ist für dich Pflicht. Wenn du vorbetest oder allein betest, rezitiere beim Fajr, Maghrib und Isha laut.",
+    },
+    femaleNote: {
+      title: '🧕 Für dich als Frau',
+      body: "Dein Gebet ist in jedem Wort, jeder Bewegung und jedem rak'ah identisch mit dem der Männer. Kleidung: bedecke alles außer Gesicht und Händen — Haare eingeschlossen — mit weiter, blickdichter Kleidung (Sunan Abi Dawud 641). Zuhause zu beten ist voll gültig und geliebt; die Moschee ist ebenso dein Recht. Während der Menstruation und der Wochenblutung entfällt das Gebet vollständig und wird danach nicht nachgeholt (Sahih al-Bukhari 321). Die Jumu'ah ist für dich nicht Pflicht — du betest stattdessen Dhuhr, bist aber willkommen, daran teilzunehmen.",
+    },
+  },
+  nl: {
+    title: 'Hoe te bidden, stap voor stap',
+    lead: '„Bid zoals jullie mij hebben zien bidden.” (Sahih al-Bukhari 631). Doorloop hieronder elke beweging en elk woord — neem rustig de tijd, stap voor stap.',
+    guideEyebrow: 'Interactieve gids',
+    guideTitle: 'Het gebed, van takbir tot salam',
+    guideSub: "Gebruik de knop Volgende (of de voortgangsbalk) om door de stappen te bewegen. Samen vormen stappen 3–8 één rak'ah — de zich herhalende eenheid van elk gebed.",
+    fullTitle: "🧭 Een heel gebed samenstellen (voorbeeld: Fajr, 2 rak'ahs)",
+    full: "Takbir → Fatiha + soera → roekoe → opstaan → 2 sujoods → opstaan voor rak'ah 2 → Fatiha + soera → roekoe → opstaan → 2 sujoods → zitten: tasjahhoed + salawat + doea → salam. Bij gebeden van 3 of 4 rak'ahs ga je na rak'ah 2 zitten voor de eerste tasjahhoed, ga je daarna verder (in rak'ahs 3–4 alleen Al-Fatiha reciterend) en sluit je aan het einde af met het volledige zitten.",
+    watchEyebrow: 'Kijk & doe na',
+    watchTitle: 'Videogidsen',
+    watchSub: "Het gebed uitgevoerd zien maakt alles duidelijk. Deze ingesloten lessen doorlopen het hele salah.",
+    fatihaEyebrow: 'Leer de woorden',
+    fatihaTitle: 'Beheers Al-Fatiha',
+    fatihaSub: "Al-Fatiha wordt in elke rak'ah gereciteerd — deze woord-voor-woord video's laten je hem vol vertrouwen reciteren.",
+    maleNote: {
+      title: '👨 Voor jou als man',
+      body: "Kleding: bedek minimaal van navel tot knieën, en indien mogelijk de schouders (Sahih al-Bukhari 359). Streef ernaar de fard in gemeenschap in de moskee te bidden — 27 keer de beloning (Sahih al-Bukhari 645) — en de Jumu'ah op vrijdag is voor jou verplicht. Wanneer je voorgaat of alleen bidt, reciteer dan hardop bij Fajr, Maghrib en Isha.",
+    },
+    femaleNote: {
+      title: '🧕 Voor jou als vrouw',
+      body: "Jouw gebed is identiek aan dat van mannen in elk woord, elke beweging en elke rak'ah. Kleding: bedek alles behalve het gezicht en de handen — haar inbegrepen — met losse, ondoorzichtige kleding (Sunan Abi Dawud 641). Thuis bidden is volledig geldig en geliefd; de moskee is ook jouw recht. Tijdens de menstruatie en het kraambloedverlies vervalt het gebed volledig en wordt het daarna niet ingehaald (Sahih al-Bukhari 321). Jumu'ah is niet verplicht voor jou — je bidt in plaats daarvan Dhuhr, al ben je welkom om aanwezig te zijn.",
+    },
+  },
+  tr: {
+    title: 'Adım Adım Namaz Nasıl Kılınır',
+    lead: '"Beni nasıl namaz kılarken gördüyseniz öyle namaz kılın." (Sahih el-Buhari 631). Aşağıdaki her hareketi ve her sözü adım adım, acele etmeden takip et.',
+    guideEyebrow: 'Etkileşimli rehber',
+    guideTitle: 'Tekbirden selama namaz',
+    guideSub: 'Adımlar arasında ilerlemek için İleri butonunu (veya ilerleme çubuğunu) kullan. 3-8. adımlar birlikte bir rekat oluşturur — her namazın tekrarlanan birimi.',
+    fullTitle: '🧭 Tam bir namazı bir araya getirmek (örnek: Sabah, 2 rekat)',
+    full: "Tekbir → Fatiha + sure → rükû → kalkış → 2 secde → 2. rekat için kalkış → Fatiha + sure → rükû → kalkış → 2 secde → oturuş: tahiyyat + salavat + dua → selam. 3 veya 4 rekatlı namazlarda 2. rekattan sonra ilk tahiyyat için otur, sonra devam et (3-4. rekatlarda yalnızca Fatiha okuyarak) ve sonunda tam oturuşla bitir.",
+    watchEyebrow: 'İzle & taklit et',
+    watchTitle: 'Video rehberleri',
+    watchSub: 'Namazın kılınışını görmek her şeyi netleştirir. Bu gömülü dersler namazın tamamını adım adım gösterir.',
+    fatihaEyebrow: 'Kelimeleri öğren',
+    fatihaTitle: "Fatiha'da ustalaş",
+    fatihaSub: "Fatiha her rekatta okunur — bu kelime kelime videolar onu güvenle okumanı sağlayacak.",
+    maleNote: {
+      title: '👨 Erkek olarak senin için',
+      body: "Kıyafet: en az göbekten dizlere kadar, mümkünse omuzları da ört (Sahih el-Buhari 359). Farzları camide cemaatle kılmaya gayret et — 27 kat sevap (Sahih el-Buhari 645) — ve Cuma namazı senin için farzdır. İmam olduğunda veya tek başına kıldığında Sabah, Akşam ve Yatsı'da sesli oku.",
+    },
+    femaleNote: {
+      title: '🧕 Kadın olarak senin için',
+      body: "Namazın, her kelime, hareket ve rekatta erkeklerinkiyle aynıdır. Kıyafet: yüz ve eller hariç her yeri — saç dahil — bol ve şeffaf olmayan giysilerle ört (Sünen Ebu Davud 641). Evde namaz kılmak tamamen geçerli ve sevilen bir şeydir; cami de senin hakkındır. Adet ve loğusalık kanaması sırasında namaz tamamen kalkar ve sonradan kaza edilmez (Sahih el-Buhari 321). Cuma namazı senin için farz değildir — onun yerine Öğle'yi kılarsın, yine de katılman için davetlisin.",
+    },
+  },
+  ur: {
+    title: 'نماز کیسے پڑھیں، مرحلہ بہ مرحلہ',
+    lead: '”نماز پڑھو جیسے تم نے مجھے نماز پڑھتے دیکھا ہے۔“ (صحیح البخاری 631)۔ نیچے ہر حرکت اور ہر لفظ سے گزریں — آہستگی سے، ایک وقت میں ایک مرحلہ۔',
+    guideEyebrow: 'انٹرایکٹو رہنما',
+    guideTitle: 'نماز، تکبیر سے سلام تک',
+    guideSub: 'مراحل میں آگے بڑھنے کے لیے اگلا بٹن (یا پیش رفت بار) استعمال کریں۔ مراحل 3 تا 8 مل کر ایک رکعت بناتے ہیں — ہر نماز کی دہرائی جانے والی اکائی۔',
+    fullTitle: '🧭 مکمل نماز کو یکجا کرنا (مثال: فجر، 2 رکعتیں)',
+    full: 'تکبیر → فاتحہ + سورت → رکوع → کھڑا ہونا → 2 سجدے → دوسری رکعت کے لیے کھڑا ہونا → فاتحہ + سورت → رکوع → کھڑا ہونا → 2 سجدے → بیٹھنا: تشہد + صلوات + دعا → سلام۔ 3 یا 4 رکعت والی نمازوں میں دوسری رکعت کے بعد پہلے تشہد کے لیے بیٹھیں، پھر جاری رکھیں (تیسری اور چوتھی رکعت میں صرف الفاتحہ پڑھتے ہوئے) اور آخر میں مکمل بیٹھک کے ساتھ ختم کریں۔',
+    watchEyebrow: 'دیکھیں اور نقل کریں',
+    watchTitle: 'ویڈیو رہنما',
+    watchSub: 'نماز کو ادا ہوتے دیکھنا سب کچھ واضح کر دیتا ہے۔ یہ شامل کردہ اسباق پوری نماز کا احاطہ کرتے ہیں۔',
+    fatihaEyebrow: 'الفاظ سیکھیں',
+    fatihaTitle: 'الفاتحہ میں مہارت حاصل کریں',
+    fatihaSub: 'الفاتحہ ہر رکعت میں پڑھی جاتی ہے — یہ لفظ بہ لفظ ویڈیوز آپ کو اعتماد کے ساتھ پڑھنے کے قابل بنائیں گی۔',
+    maleNote: {
+      title: '👨 آپ کے لیے بطور مرد',
+      body: 'لباس: کم از کم ناف سے گھٹنوں تک، اور ممکن ہو تو کندھے بھی ڈھانپیں (صحیح البخاری 359)۔ فرض نمازیں مسجد میں جماعت کے ساتھ پڑھنے کی کوشش کریں — 27 گنا ثواب (صحیح البخاری 645) — اور جمعہ آپ پر فرض ہے۔ امامت کرتے وقت یا اکیلے پڑھتے وقت فجر، مغرب اور عشاء میں بلند آواز سے قراءت کریں۔',
+    },
+    femaleNote: {
+      title: '🧕 آپ کے لیے بطور عورت',
+      body: 'آپ کی نماز ہر لفظ، حرکت اور رکعت میں مردوں کی طرح ہی ہے۔ لباس: چہرے اور ہاتھوں کے سوا سب کچھ — بالوں سمیت — ڈھیلے اور غیر شفاف کپڑوں سے ڈھانپیں (سنن ابی داؤد 641)۔ گھر میں نماز پڑھنا مکمل طور پر جائز اور پسندیدہ ہے؛ مسجد بھی آپ کا حق ہے۔ حیض اور نفاس کے دوران نماز مکمل طور پر ساقط ہو جاتی ہے اور بعد میں قضا نہیں کی جاتی (صحیح البخاری 321)۔ جمعہ آپ پر فرض نہیں — اس کے بجائے آپ ظہر پڑھتی ہیں، اگرچہ آپ کی شرکت کا خیرمقدم ہے۔',
+    },
+  },
 }
 
 function StepGuide() {
@@ -160,7 +275,7 @@ function StepGuide() {
 export default function HowToPray() {
   const { lang } = useLang()
   const { gender } = useGender()
-  const c = C[lang]
+  const c = C[lang] || C.en
   const gNote = gender === 'female' ? c.femaleNote : gender === 'male' ? c.maleNote : null
 
   return (

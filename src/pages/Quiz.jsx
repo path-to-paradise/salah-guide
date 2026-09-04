@@ -39,6 +39,96 @@ const C = {
       begin: 'Всеки експерт някога е бил начинаещ — извърви пътя на учене от стъпка 1 и се върни!',
     },
   },
+  fr: {
+    title: 'Testez-vous',
+    lead: (n) =>
+      `${n} questions du débutant à l'expert. Chaque réponse est accompagnée de sa preuve — ainsi, même une mauvaise réponse vous apprend quelque chose.`,
+    question: 'Question',
+    of: 'sur',
+    score: 'Score',
+    correct: '✅ Correct ! ',
+    seeScore: 'Voir mon score →',
+    nextQ: 'Question suivante →',
+    tryAgain: 'Réessayer',
+    grades: {
+      perfect: "Score parfait — machaAllah, vous maîtrisez votre Salah !",
+      great: "Excellent — encore un peu de révision et vous saurez tout.",
+      good: 'Bon début — revoyez les pages Comment prier et Types et réessayez.',
+      begin: "Chaque expert a été un jour débutant — parcourez le parcours d'apprentissage depuis l'étape 1 et revenez !",
+    },
+  },
+  de: {
+    title: 'Teste dich selbst',
+    lead: (n) =>
+      `${n} Fragen von Anfänger bis Experte. Jede Antwort kommt mit ihrem Beleg — so lernst du selbst bei einer falschen Vermutung etwas.`,
+    question: 'Frage',
+    of: 'von',
+    score: 'Punkte',
+    correct: '✅ Richtig! ',
+    seeScore: 'Meine Punktzahl ansehen →',
+    nextQ: 'Nächste Frage →',
+    tryAgain: 'Nochmal versuchen',
+    grades: {
+      perfect: "Perfekte Punktzahl — maschaAllah, du kennst dich mit deinem Salah aus!",
+      great: "Ausgezeichnet — ein wenig Wiederholung und du hast alles drauf.",
+      good: 'Guter Anfang — schau dir die Seiten „Wie man betet" und „Arten" noch einmal an und versuch es erneut.',
+      begin: 'Jeder Experte war einmal Anfänger — geh die Lernreise ab Schritt 1 durch und komm zurück!',
+    },
+  },
+  nl: {
+    title: 'Test jezelf',
+    lead: (n) =>
+      `${n} vragen van beginner tot expert. Elk antwoord komt met bewijs — zo leer je zelfs van een fout antwoord iets.`,
+    question: 'Vraag',
+    of: 'van',
+    score: 'Score',
+    correct: '✅ Correct! ',
+    seeScore: 'Bekijk mijn score →',
+    nextQ: 'Volgende vraag →',
+    tryAgain: 'Opnieuw proberen',
+    grades: {
+      perfect: "Perfecte score — masha'Allah, jij kent je Salah!",
+      great: "Uitstekend — een beetje herhaling en je kent alles.",
+      good: "Goed begin — bekijk de pagina's Hoe te bidden en Types opnieuw en probeer het nog eens.",
+      begin: 'Elke expert was ooit een beginner — doorloop de leerreis vanaf stap 1 en kom terug!',
+    },
+  },
+  tr: {
+    title: 'Kendini Test Et',
+    lead: (n) =>
+      `Başlangıçtan uzmana kadar ${n} soru. Her cevap kendi delili ile birlikte gelir — böylece yanlış bir tahmin bile size bir şey öğretir.`,
+    question: 'Soru',
+    of: '/',
+    score: 'Puan',
+    correct: '✅ Doğru! ',
+    seeScore: 'Puanımı gör →',
+    nextQ: 'Sonraki soru →',
+    tryAgain: 'Tekrar dene',
+    grades: {
+      perfect: "Mükemmel puan — maşaAllah, namazını çok iyi biliyorsun!",
+      great: "Mükemmel — biraz daha tekrar ile her şeyi öğreneceksin.",
+      good: 'İyi bir başlangıç — Nasıl Namaz Kılınır ve Türler sayfalarını tekrar gözden geçirip yeniden dene.',
+      begin: 'Her uzman bir zamanlar acemiydi — öğrenme yolculuğuna 1. adımdan başla ve geri dön!',
+    },
+  },
+  ur: {
+    title: 'اپنے آپ کو آزمائیں',
+    lead: (n) =>
+      `ابتدائی سے ماہر تک ${n} سوالات۔ ہر جواب اپنی دلیل کے ساتھ آتا ہے — اس لیے غلط اندازہ بھی آپ کو کچھ سکھاتا ہے۔`,
+    question: 'سوال',
+    of: 'از',
+    score: 'اسکور',
+    correct: '✅ درست! ',
+    seeScore: 'میرا اسکور دیکھیں →',
+    nextQ: 'اگلا سوال →',
+    tryAgain: 'دوبارہ کوشش کریں',
+    grades: {
+      perfect: "مکمل نمبر — ماشاءاللہ، آپ اپنی نماز کو خوب جانتے ہیں!",
+      great: "بہترین — تھوڑی سی مزید مشق اور آپ سب کچھ جان لیں گے۔",
+      good: 'اچھی شروعات — "نماز کیسے پڑھیں" اور "اقسام" کے صفحات دوبارہ دیکھیں اور دوبارہ کوشش کریں۔',
+      begin: 'ہر ماہر کبھی ابتدائی تھا — سیکھنے کا سفر قدم 1 سے شروع کریں اور واپس آئیں!',
+    },
+  },
 }
 
 export default function Quiz() {
@@ -47,7 +137,7 @@ export default function Quiz() {
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
   const { lang, L } = useLang()
-  const c = C[lang]
+  const c = C[lang] || C.en
 
   const q = quizQuestions[i]
 

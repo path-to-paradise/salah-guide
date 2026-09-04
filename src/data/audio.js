@@ -9,8 +9,24 @@ const QURAN_AYAH = (globalAyah) =>
   `https://cdn.islamic.network/quran/audio/128/ar.alafasy/${globalAyah}.mp3`
 const HISN = (id) => `https://www.hisnmuslim.com/audio/ar/${id}.mp3`
 
-const ALAFASY = { en: 'Mishary Rashid Alafasy', bg: 'Мишари Рашид ал-Афаси' }
-const HISN_CREDIT = { en: 'Hisnul Muslim (hisnmuslim.com)', bg: 'Хиснул Муслим (hisnmuslim.com)' }
+const ALAFASY = {
+  en: 'Mishary Rashid Alafasy',
+  bg: 'Мишари Рашид ал-Афаси',
+  fr: 'Mishary Rashid Alafasy',
+  de: 'Mishary Rashid Alafasy',
+  nl: 'Mishary Rashid Alafasy',
+  tr: 'Mishary Rashid Alafasy',
+  ur: 'مشاری راشد العفاسی',
+}
+const HISN_CREDIT = {
+  en: 'Hisnul Muslim (hisnmuslim.com)',
+  bg: 'Хиснул Муслим (hisnmuslim.com)',
+  fr: 'Hisnul Muslim (hisnmuslim.com)',
+  de: 'Hisnul Muslim (hisnmuslim.com)',
+  nl: 'Hisnul Muslim (hisnmuslim.com)',
+  tr: 'Hisnul Muslim (hisnmuslim.com)',
+  ur: 'حصن المسلم (hisnmuslim.com)',
+}
 
 export const duaAudio = {
   // ---- inside the prayer ----

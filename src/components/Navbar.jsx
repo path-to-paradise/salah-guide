@@ -65,19 +65,18 @@ export default function Navbar() {
               🧕
             </button>
           </div>
-          <div className="lang-switch" role="group" aria-label="Language">
+          <select
+            className="lang-select"
+            aria-label="Language"
+            value={lang}
+            onChange={(e) => setLang(e.target.value)}
+          >
             {LANGS.map((l) => (
-              <button
-                key={l.code}
-                className={lang === l.code ? 'active' : ''}
-                onClick={() => setLang(l.code)}
-                aria-pressed={lang === l.code}
-                title={l.label}
-              >
-                {l.short}
-              </button>
+              <option key={l.code} value={l.code}>
+                {l.flag} {l.short}
+              </option>
             ))}
-          </div>
+          </select>
           <button
             className={`nav-toggle ${open ? 'open' : ''}`}
             aria-label="Toggle menu"

@@ -231,6 +231,29 @@ select {
   color: var(--green-deep);
 }
 
+.lang-select {
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #cfe0d8;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  padding: 7px 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lang-select:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.lang-select option {
+  color: #111;
+  background: #fff;
+}
+
 /* --- nav rail (desktop) --- */
 .nav-row {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1844,6 +1867,28 @@ button.video-poster {
   margin-bottom: 16px;
 }
 
+.lang-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.lang-btn {
+  padding: 14px 8px;
+  font-size: 0.92rem;
+}
+
+.lang-btn span {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 420px) {
+  .lang-btns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .gender-btn {
   display: flex;
   flex-direction: column;
@@ -2228,7 +2273,8 @@ button.video-poster {
     justify-content: space-between;
   }
 
-  .lang-switch {
+  .lang-switch,
+  .lang-select {
     flex: 1 1 auto;
   }
 
@@ -2265,4 +2311,22 @@ button.video-poster {
     display: block;
     margin-top: 8px;
   }
+}
+
+/* ===== Urdu (RTL text) ===== */
+/* Text itself reads right-to-left in Urdu; page chrome (navbar, cards,
+   grids) stays left-to-right — no whole-page mirroring. */
+html[lang='ur'] h1,
+html[lang='ur'] h2,
+html[lang='ur'] h3,
+html[lang='ur'] h4,
+html[lang='ur'] p,
+html[lang='ur'] li,
+html[lang='ur'] td,
+html[lang='ur'] blockquote,
+html[lang='ur'] .modal-body,
+html[lang='ur'] .callout,
+html[lang='ur'] .section-sub {
+  direction: rtl;
+  text-align: right;
 }
