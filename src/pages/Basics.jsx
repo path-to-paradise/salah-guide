@@ -234,7 +234,6 @@ export default function Basics() {
             <table className="nice">
               <thead>
                 <tr>
-                  <th style={{ width: 60 }}>#</th>
                   <th>{c.thStep}</th>
                   <th>{c.thHow}</th>
                   <th style={{ width: 80 }}>{c.thTimes}</th>
@@ -243,12 +242,11 @@ export default function Basics() {
               <tbody>
                 {wuduSteps.map((s, i) => (
                   <tr key={i}>
-                    <td>{i + 1}</td>
-                    <td>
-                      <strong>{L(s.title)}</strong>
+                    <td data-label={c.thStep}>
+                      <strong>{i + 1}. {L(s.title)}</strong>
                     </td>
-                    <td>{L(s.detail)}</td>
-                    <td>{s.times}</td>
+                    <td data-label={c.thHow}>{L(s.detail)}</td>
+                    <td data-label={c.thTimes}>{s.times}</td>
                   </tr>
                 ))}
               </tbody>

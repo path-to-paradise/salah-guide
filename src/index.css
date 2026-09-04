@@ -1133,9 +1133,11 @@ a.card:hover {
   background: var(--card);
 }
 
-/* Edge fade hints that the table scrolls sideways — table.nice has a
-   min-width, so on narrow screens it almost always overflows here. */
-@media (max-width: 900px) {
+/* Edge fade hints that the table scrolls sideways on tablet, where it's
+   still a real <table> — below 700px it becomes a card list instead
+   (see the card-mode block near the bottom of this file), so no fade
+   or horizontal scroll is needed there. */
+@media (max-width: 900px) and (min-width: 701px) {
   .table-wrap::after {
     content: '';
     position: absolute;
@@ -1174,10 +1176,92 @@ table.nice tr:nth-child(even) td {
   background: #fbf9f3;
 }
 
+table.nice tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+table.nice tbody tr:hover td {
+  background: var(--green-tint);
+}
+
 table.nice .ar {
   font-family: var(--font-arabic);
   font-size: 1.2rem;
   color: var(--green-dark);
+}
+
+/* Below 700px a data table becomes a stack of labelled cards instead of a
+   cramped, horizontally-scrolling grid — every <td> needs a data-label
+   attribute (the same text as its column header) for the ::before label. */
+@media (max-width: 700px) {
+  .table-wrap {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
+  }
+
+  table.nice {
+    display: block;
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  table.nice thead {
+    display: none;
+  }
+
+  table.nice tbody {
+    display: block;
+  }
+
+  table.nice tr {
+    display: block;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 6px 16px;
+    margin-bottom: 12px;
+  }
+
+  table.nice tr:last-child {
+    margin-bottom: 0;
+  }
+
+  table.nice tr:nth-child(even) td {
+    background: transparent;
+  }
+
+  table.nice tbody tr:hover td {
+    background: transparent;
+  }
+
+  table.nice td {
+    display: block;
+    padding: 10px 0;
+    border-top: none;
+  }
+
+  table.nice td:not(:last-child) {
+    border-bottom: 1px dashed var(--line);
+  }
+
+  table.nice td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--gold-dark);
+    margin-bottom: 5px;
+  }
+
+  table.nice td[colspan]::before {
+    content: none;
+  }
 }
 
 /* ===== accordion ===== */
@@ -2284,10 +2368,6 @@ button.video-poster {
 
   .pt-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  table.nice {
-    min-width: 560px;
   }
 
   .type-facts {

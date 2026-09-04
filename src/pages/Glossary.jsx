@@ -151,9 +151,9 @@ export default function Glossary() {
               <tbody>
                 {filtered.map((g) => (
                   <tr key={g.arabic}>
-                    <td><strong>{L(g.term)}</strong></td>
-                    <td className="ar">{g.arabic}</td>
-                    <td>{L(g.def)}</td>
+                    <td data-label={c.thTerm}><strong>{L(g.term)}</strong></td>
+                    <td className="ar" data-label={c.thArabic}>{g.arabic}</td>
+                    <td data-label={c.thMeaning}>{L(g.def)}</td>
                   </tr>
                 ))}
                 {filtered.length === 0 && (

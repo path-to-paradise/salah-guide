@@ -338,11 +338,11 @@ export default function PrayerTimes() {
               <tbody>
                 {prayers.map((p) => (
                   <tr key={p.ar}>
-                    <td>
+                    <td data-label={c.thPrayer}>
                       <strong>{L(p.name)}</strong> <span className="ar">{p.ar}</span>
                     </td>
-                    <td>{L(p.window)}</td>
-                    <td>
+                    <td data-label={c.thWindow}>{L(p.window)}</td>
+                    <td data-label={c.thRakahs}>
                       <Dots s={p.sunnahBefore} f={p.fard} w={p.sunnahAfter} />
                       <div style={{ fontSize: '0.82rem', color: 'var(--muted)' }}>
                         {p.sunnahBefore ? `${p.sunnahBefore} ${c.sunnah} + ` : ''}
@@ -350,8 +350,8 @@ export default function PrayerTimes() {
                         {p.sunnahAfter ? ` + ${p.sunnahAfter} ${c.sunnah}` : ''}
                       </div>
                     </td>
-                    <td>{L(p.aloud)}</td>
-                    <td>{L(p.note)}</td>
+                    <td data-label={c.thRecit}>{L(p.aloud)}</td>
+                    <td data-label={c.thNote}>{L(p.note)}</td>
                   </tr>
                 ))}
               </tbody>
