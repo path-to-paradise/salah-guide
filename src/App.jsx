@@ -5,6 +5,7 @@ import PathNav from './components/PathNav.jsx'
 import Footer from './components/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import PWAUpdateToast from './components/PWAUpdateToast.jsx'
+import Analytics from './components/Analytics.jsx'
 import Home from './pages/Home.jsx'
 import Basics from './pages/Basics.jsx'
 import Purity from './pages/Purity.jsx'
@@ -39,6 +40,7 @@ function App() {
       </main>
       <Footer />
       <PWAUpdateToast />
+      <Analytics />
     </div>
   )
 }

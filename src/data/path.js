@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { trackEvent } from '../lib/analytics.js'
 
 // The learning path: every station in order, from zero to mastery.
 // navKey points at t.nav for the localized title.
@@ -148,8 +149,10 @@ export function usePathProgress() {
     localStorage.setItem(KEY, JSON.stringify(done))
   }, [done])
 
-  const markDone = (key) =>
+  const markDone = (key) => {
     setDone((d) => (d.includes(key) ? d : [...d, key]))
+    trackEvent('path_step_complete', { step: key })
+  }
 
   const currentIndex = stations.findIndex((s) => !done.includes(s.key))
 

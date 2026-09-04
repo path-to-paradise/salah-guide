@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
+import { trackEvent } from '../lib/analytics.js'
 
 // gender: 'male' | 'female' | null (not chosen yet — the welcome modal shows).
 // Rulings that differ between men and women (covering, Jumu'ah, monthly
@@ -11,13 +12,16 @@ export function GenderProvider({ children }) {
     return saved === 'male' || saved === 'female' ? saved : null
   })
 
+  const isFirstRender = useRef(true)
   useEffect(() => {
     if (gender) {
       localStorage.setItem('salah-gender', gender)
       document.documentElement.dataset.gender = gender
+      if (!isFirstRender.current) trackEvent('gender_select', { gender })
     } else {
       delete document.documentElement.dataset.gender
     }
+    isFirstRender.current = false
   }, [gender])
 
   return (

@@ -12,7 +12,7 @@ export default function DuaCard({ dua }) {
       </div>
       <p className="dua-occasion">{L(dua.occasion)}</p>
       <div className="dua-arabic" lang="ar">{dua.arabic}</div>
-      {audio && <AudioPlayer src={audio.src} credit={audio.credit} />}
+      {audio && <AudioPlayer src={audio.src} credit={audio.credit} trackId={dua.id} />}
       {dua.notes && <div className="dua-notes">💡 {L(dua.notes)}</div>}
       <p className="dua-translit">{L(dua.transliteration)}</p>
       <p className="dua-translation">“{L(dua.translation)}”</p>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { quizQuestions, quizLevels } from '../data/quiz.js'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { trackEvent } from '../lib/analytics.js'
 
 const C = {
   en: {
@@ -150,6 +151,7 @@ export default function Quiz() {
   const next = () => {
     if (i + 1 >= quizQuestions.length) {
       setFinished(true)
+      trackEvent('quiz_complete', { score, total: quizQuestions.length })
     } else {
       setI(i + 1)
       setPicked(null)

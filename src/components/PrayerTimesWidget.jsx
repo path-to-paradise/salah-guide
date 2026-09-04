@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { trackEvent } from '../lib/analytics.js'
 
 const PRAYERS = [
   { key: 'Fajr', ar: 'الفجر' },
@@ -30,6 +31,7 @@ export default function PrayerTimesWidget() {
       const json = await res.json()
       setTimes(json.data.timings)
       setLabel(`${json.data.date.readable}`)
+      trackEvent('prayer_times_lookup', { method: 'location' })
     } catch {
       setError(t.pt.errGeneric)
     } finally {
@@ -50,6 +52,7 @@ export default function PrayerTimesWidget() {
       if (json.code !== 200) throw new Error('bad response')
       setTimes(json.data.timings)
       setLabel(`${city}, ${country} · ${json.data.date.readable}`)
+      trackEvent('prayer_times_lookup', { method: 'city' })
     } catch {
       setError(t.pt.errCity)
     } finally {

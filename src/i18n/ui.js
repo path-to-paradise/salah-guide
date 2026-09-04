@@ -89,6 +89,11 @@ export const ui = {
       reload: 'Reload',
       dismiss: 'Dismiss',
     },
+    consent: {
+      message: "This site uses Google Analytics to see how it's used — nothing personal is sold or shared. You're welcome to decline.",
+      accept: 'Accept',
+      decline: 'Decline',
+    },
   },
 
   bg: {
@@ -179,6 +184,11 @@ export const ui = {
       needRefresh: 'Налична е нова версия',
       reload: 'Презареди',
       dismiss: 'Затвори',
+    },
+    consent: {
+      message: 'Този сайт използва Google Analytics, за да разбира как се използва — нищо лично не се продава или споделя. Можеш спокойно да откажеш.',
+      accept: 'Приемам',
+      decline: 'Отказвам',
     },
   },
 
@@ -271,6 +281,11 @@ export const ui = {
       reload: 'Recharger',
       dismiss: 'Fermer',
     },
+    consent: {
+      message: "Ce site utilise Google Analytics pour comprendre son usage — rien de personnel n'est vendu ni partagé. Tu peux refuser sans problème.",
+      accept: 'Accepter',
+      decline: 'Refuser',
+    },
   },
 
   de: {
@@ -361,6 +376,11 @@ export const ui = {
       needRefresh: 'Eine neue Version ist verfügbar',
       reload: 'Neu laden',
       dismiss: 'Schließen',
+    },
+    consent: {
+      message: 'Diese Seite nutzt Google Analytics, um zu verstehen, wie sie genutzt wird — nichts Persönliches wird verkauft oder weitergegeben. Du kannst ablehnen.',
+      accept: 'Akzeptieren',
+      decline: 'Ablehnen',
     },
   },
 
@@ -453,6 +473,11 @@ export const ui = {
       reload: 'Vernieuwen',
       dismiss: 'Sluiten',
     },
+    consent: {
+      message: 'Deze site gebruikt Google Analytics om te begrijpen hoe hij gebruikt wordt — er wordt niets persoonlijks verkocht of gedeeld. Je mag gerust weigeren.',
+      accept: 'Accepteren',
+      decline: 'Weigeren',
+    },
   },
 
   tr: {
@@ -544,6 +569,11 @@ export const ui = {
       reload: 'Yenile',
       dismiss: 'Kapat',
     },
+    consent: {
+      message: 'Bu site, nasıl kullanıldığını anlamak için Google Analytics kullanır — kişisel hiçbir şey satılmaz veya paylaşılmaz. İstersen reddedebilirsin.',
+      accept: 'Kabul et',
+      decline: 'Reddet',
+    },
   },
 
   ur: {
@@ -634,6 +664,11 @@ export const ui = {
       needRefresh: 'نیا ورژن دستیاب ہے',
       reload: 'دوبارہ لوڈ کریں',
       dismiss: 'بند کریں',
+    },
+    consent: {
+      message: 'یہ سائٹ استعمال کے طریقے کو سمجھنے کے لیے Google Analytics استعمال کرتی ہے — کوئی ذاتی معلومات فروخت یا شیئر نہیں کی جاتیں۔ آپ بلا جھجک انکار کر سکتے ہیں۔',
+      accept: 'قبول کریں',
+      decline: 'انکار کریں',
     },
   },
 }

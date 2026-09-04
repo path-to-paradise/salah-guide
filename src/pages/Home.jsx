@@ -4,6 +4,7 @@ import PrayerTimesWidget from '../components/PrayerTimesWidget.jsx'
 import PoseFigure from '../components/PoseFigure.jsx'
 import { useLang } from '../i18n/LanguageContext.jsx'
 import { stations, usePathProgress } from '../data/path.js'
+import { trackEvent } from '../lib/analytics.js'
 
 function PathMap() {
   const { lang, L, t } = useLang()
@@ -341,8 +342,10 @@ function LearningChecklist() {
     localStorage.setItem('salah-checklist', JSON.stringify(done))
   }, [done])
 
-  const toggle = (i) =>
+  const toggle = (i) => {
     setDone((d) => (d.includes(i) ? d.filter((x) => x !== i) : [...d, i]))
+    trackEvent('checklist_toggle', { item: i, checked: !done.includes(i) })
+  }
 
   const pct = Math.round((done.length / checklistItems.length) * 100)
 

@@ -1,5 +1,6 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { ui } from './ui.js'
+import { trackEvent } from '../lib/analytics.js'
 
 // To add another language: add it here, add a ui.<code> dictionary, and add
 // <code> fields to the data files. L() falls back to English for any field
@@ -22,9 +23,15 @@ export function LanguageProvider({ children }) {
     return LANGS.some((l) => l.code === saved) ? saved : 'en'
   })
 
+  const isFirstRender = useRef(true)
   useEffect(() => {
     localStorage.setItem('salah-lang', lang)
     document.documentElement.lang = lang
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+    } else {
+      trackEvent('language_change', { language: lang })
+    }
   }, [lang])
 
   // L(field): picks the current language from a {en, bg, ...} object,

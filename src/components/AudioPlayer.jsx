@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { trackEvent } from '../lib/analytics.js'
 
 const fmt = (s) => {
   if (!isFinite(s)) return '0:00'
@@ -9,7 +10,7 @@ const fmt = (s) => {
 }
 
 // Minimal recitation player. Only one plays at a time across the page.
-export default function AudioPlayer({ src, credit }) {
+export default function AudioPlayer({ src, credit, trackId }) {
   const ref = useRef(null)
   const trackRef = useRef(null)
   const [playing, setPlaying] = useState(false)
@@ -65,7 +66,10 @@ export default function AudioPlayer({ src, credit }) {
         ref={ref}
         src={src}
         preload="none"
-        onPlay={() => setPlaying(true)}
+        onPlay={() => {
+          setPlaying(true)
+          trackEvent('dua_audio_play', { dua_id: trackId })
+        }}
         onPause={() => setPlaying(false)}
         onEnded={() => setPlaying(false)}
         onTimeUpdate={(e) => setTime(e.target.currentTime)}
