@@ -121,7 +121,7 @@ The site builds to a static `dist/` folder (`npm run build`) and can be hosted a
 
 ## Contributing
 
-Found a mistake — a typo, a broken link, an awkward translation, something factually off? Every page has a **Suggest an edit** link in the footer that opens the relevant file directly on GitHub (forks and opens a pull request for you automatically). See [CONTRIBUTING.md](CONTRIBUTING.md) for the full workflow, including how to run the site locally for bigger changes and where each kind of content actually lives. Pull requests are reviewed by the maintainer; once approved and merged into `main`, the site redeploys automatically.
+Found a mistake — a typo, a broken link, an awkward translation, something factually off? The site has a built-in **[/contribute](https://salah-guide.rifatcholakov.com/contribute)** page (also linked from every footer) that walks visitors through it in plain language, with one-click "edit this page on GitHub" links for every page on the site (forks and opens a pull request automatically) plus a "report an issue" option for anyone who'd rather just flag it. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full technical workflow, including how to run the site locally for bigger changes and where each kind of content actually lives. Pull requests are reviewed by the maintainer; once approved and merged into `main`, the site redeploys automatically.
 
 ## Disclaimer
 

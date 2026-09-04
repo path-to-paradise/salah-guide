@@ -43,6 +43,7 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h4>{t.footer.contribute}</h4>
+          <Link to="/contribute">📖 {t.footer.howTo}</Link>
           <a href={editPageUrl(pathname)} target="_blank" rel="noreferrer">
             ✏️ {t.footer.suggestEdit}
           </a>

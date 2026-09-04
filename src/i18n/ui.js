@@ -32,6 +32,7 @@ export const ui = {
       contribute: 'Contribute',
       suggestEdit: 'Found a mistake? Suggest an edit',
       reportIssue: 'Report an issue',
+      howTo: 'How to contribute — guide',
     },
     common: {
       source: 'Source',
@@ -131,6 +132,7 @@ export const ui = {
       contribute: 'Приноси',
       suggestEdit: 'Забеляза грешка? Предложи корекция',
       reportIssue: 'Докладвай проблем',
+      howTo: 'Как да допринесеш — упътване',
     },
     common: {
       source: 'Източник',
@@ -230,6 +232,7 @@ export const ui = {
       contribute: 'Contribuer',
       suggestEdit: 'Tu as trouvé une erreur ? Propose une modification',
       reportIssue: 'Signaler un problème',
+      howTo: 'Comment contribuer — le guide',
     },
     common: {
       source: 'Source',
@@ -329,6 +332,7 @@ export const ui = {
       contribute: 'Mitwirken',
       suggestEdit: 'Einen Fehler gefunden? Änderung vorschlagen',
       reportIssue: 'Problem melden',
+      howTo: 'Wie du mitwirken kannst — Leitfaden',
     },
     common: {
       source: 'Quelle',
@@ -428,6 +432,7 @@ export const ui = {
       contribute: 'Bijdragen',
       suggestEdit: 'Fout gevonden? Stel een wijziging voor',
       reportIssue: 'Probleem melden',
+      howTo: 'Hoe bijdragen — gids',
     },
     common: {
       source: 'Bron',
@@ -527,6 +532,7 @@ export const ui = {
       contribute: 'Katkıda bulun',
       suggestEdit: 'Bir hata mı gördün? Düzenleme öner',
       reportIssue: 'Sorun bildir',
+      howTo: 'Nasıl katkıda bulunulur — rehber',
     },
     common: {
       source: 'Kaynak',
@@ -626,6 +632,7 @@ export const ui = {
       contribute: 'حصہ لیں',
       suggestEdit: 'کوئی غلطی نظر آئی؟ ترمیم تجویز کریں',
       reportIssue: 'مسئلہ رپورٹ کریں',
+      howTo: 'رہنمائی — کیسے حصہ لیں',
     },
     common: {
       source: 'ماخذ',

@@ -16,6 +16,7 @@ import Duas from './pages/Duas.jsx'
 import Beyond from './pages/Beyond.jsx'
 import Quiz from './pages/Quiz.jsx'
 import Glossary from './pages/Glossary.jsx'
+import Contribute from './pages/Contribute.jsx'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/beyond" element={<Beyond />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/glossary" element={<Glossary />} />
+          <Route path="/contribute" element={<Contribute />} />
         </Routes>
         <PathNav />
       </main>

@@ -1,7 +1,8 @@
-// Powers the "Suggest an edit" / "Report an issue" links in the footer.
-// GitHub's web editor auto-forks the repo for non-collaborators and offers
-// to open a pull request on save — no custom backend needed for that flow.
-const REPO = 'path-to-paradise/salah-guide'
+// Powers the "Suggest an edit" / "Report an issue" links in the footer and
+// the /contribute page. GitHub's web editor auto-forks the repo for
+// non-collaborators and offers to open a pull request on save — no custom
+// backend needed for that flow.
+export const REPO = 'path-to-paradise/salah-guide'
 const BRANCH = 'main'
 
 // Route -> the page file a contributor should start from. Not every piece of
@@ -27,9 +28,11 @@ export function editPageUrl(pathname) {
 }
 
 export function newIssueUrl(pathname) {
-  const params = new URLSearchParams({
-    template: 'mistake-report.md',
-    title: `Mistake on ${pathname}`,
-  })
+  const params = new URLSearchParams({ template: 'mistake-report.md' })
+  if (pathname) params.set('title', `Mistake on ${pathname}`)
   return `https://github.com/${REPO}/issues/new?${params}`
+}
+
+export function repoUrl(path = '') {
+  return `https://github.com/${REPO}${path}`
 }
