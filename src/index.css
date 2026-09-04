@@ -1013,7 +1013,8 @@ a.card:hover {
   .figure-float,
   .step-content li,
   .step-content .step-say,
-  .step-content .step-mistake {
+  .step-content .step-mistake,
+  .modal-card {
     animation: none;
     stroke-dashoffset: 0;
     opacity: 1;
@@ -1892,10 +1893,26 @@ button.video-poster {
   border-top: 5px solid var(--gold);
   max-width: 480px;
   width: 100%;
+  max-height: min(640px, 100vh - 40px);
+  max-height: min(640px, 100dvh - 40px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 34px 32px 28px;
   text-align: center;
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
   position: relative;
+  animation: stepIn 0.25s ease;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.modal-card::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-card::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 8px;
 }
 
 .modal-lang {
@@ -2313,7 +2330,7 @@ button.video-poster {
   }
 
   .modal-card {
-    padding: 74px 20px 24px;
+    padding: 26px 20px 20px;
   }
 }
 

@@ -60,7 +60,7 @@ export const ui = {
       allDone: "🎉 Masha'Allah — you have walked the whole path! Retake the quiz any time, or dive into the Glossary.",
     },
     gender: {
-      title: "Who's praying?",
+      title: 'Select your gender',
       male: 'Man',
       female: 'Woman',
       switchTitle: 'Guidance shown for',
@@ -145,7 +145,7 @@ export const ui = {
       allDone: '🎉 Машаллах — извървя целия път! Направи теста отново по всяко време или разгледай Речника.',
     },
     gender: {
-      title: 'Кой ще кланя?',
+      title: 'Избери своя пол',
       male: 'Мъж',
       female: 'Жена',
       switchTitle: 'Напътствия за',
@@ -230,7 +230,7 @@ export const ui = {
       allDone: "🎉 Mashallah — tu as parcouru tout le chemin ! Refais le quiz à tout moment, ou explore le Glossaire.",
     },
     gender: {
-      title: 'Qui prie ?',
+      title: 'Sélectionne ton genre',
       male: 'Homme',
       female: 'Femme',
       switchTitle: 'Indications affichées pour',
@@ -315,7 +315,7 @@ export const ui = {
       allDone: '🎉 Maschallah — du hast den ganzen Weg zurückgelegt! Wiederhole das Quiz jederzeit oder stöbere im Glossar.',
     },
     gender: {
-      title: 'Wer betet?',
+      title: 'Wähle dein Geschlecht',
       male: 'Mann',
       female: 'Frau',
       switchTitle: 'Anleitung angezeigt für',
@@ -400,7 +400,7 @@ export const ui = {
       allDone: "🎉 Masha'Allah — je hebt het hele pad afgelegd! Doe de quiz opnieuw wanneer je wilt, of duik in de Woordenlijst.",
     },
     gender: {
-      title: 'Wie bidt er?',
+      title: 'Selecteer je geslacht',
       male: 'Man',
       female: 'Vrouw',
       switchTitle: 'Richtlijnen getoond voor',
@@ -485,7 +485,7 @@ export const ui = {
       allDone: '🎉 Maşallah — tüm yolu tamamladın! İstediğin zaman testi tekrar çöz veya Sözlüğe göz at.',
     },
     gender: {
-      title: 'Kim namaz kılıyor?',
+      title: 'Cinsiyetini seç',
       male: 'Erkek',
       female: 'Kadın',
       switchTitle: 'Şunun için gösterilen rehberlik',
@@ -570,7 +570,7 @@ export const ui = {
       allDone: '🎉 ماشاءاللہ — آپ نے پورا راستہ طے کر لیا! کبھی بھی کوئز دوبارہ دیں، یا لغت دیکھیں۔',
     },
     gender: {
-      title: 'نماز کون پڑھ رہا ہے؟',
+      title: 'اپنی صنف منتخب کریں',
       male: 'مرد',
       female: 'عورت',
       switchTitle: 'رہنمائی دکھائی جا رہی ہے برائے',

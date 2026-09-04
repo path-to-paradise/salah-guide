@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useGender } from '../i18n/GenderContext.jsx'
 import { useLang, LANGS } from '../i18n/LanguageContext.jsx'
 
@@ -13,13 +13,28 @@ export default function GenderGate() {
     localStorage.getItem('salah-lang') ? 'gender' : 'lang',
   )
 
+  // Lock page scroll behind the modal — otherwise the body scrolls out from
+  // under a fixed overlay while the modal's own content stays put.
+  useEffect(() => {
+    if (gender) return
+    const html = document.documentElement
+    const prevBody = document.body.style.overflow
+    const prevHtml = html.style.overflow
+    document.body.style.overflow = 'hidden'
+    html.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prevBody
+      html.style.overflow = prevHtml
+    }
+  }, [gender])
+
   if (gender) return null
 
   if (step === 'lang') {
     return (
       <div className="modal-overlay" role="dialog" aria-modal="true" aria-label="Language">
         <div className="modal-card">
-          <div className="gender-btns lang-btns">
+          <div className="lang-btns">
             {LANGS.map((l) => (
               <button
                 key={l.code}
