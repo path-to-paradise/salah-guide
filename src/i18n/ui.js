@@ -88,7 +88,7 @@ export const ui = {
       names: { Fajr: 'Fajr', Dhuhr: 'Dhuhr', Asr: 'Asr', Maghrib: 'Maghrib', Isha: 'Isha' },
     },
     pwa: {
-      offlineReady: 'Ready to use offline',
+      install: 'Install app',
       needRefresh: 'A new version is available',
       reload: 'Reload',
       dismiss: 'Dismiss',
@@ -188,7 +188,7 @@ export const ui = {
       names: { Fajr: 'Фаджр', Dhuhr: 'Зухр', Asr: 'Аср', Maghrib: 'Магриб', Isha: 'Иша' },
     },
     pwa: {
-      offlineReady: 'Готов за офлайн използване',
+      install: 'Инсталирай приложението',
       needRefresh: 'Налична е нова версия',
       reload: 'Презареди',
       dismiss: 'Затвори',
@@ -288,7 +288,7 @@ export const ui = {
       names: { Fajr: 'Fajr', Dhuhr: 'Dhuhr', Asr: 'Asr', Maghrib: 'Maghrib', Isha: 'Isha' },
     },
     pwa: {
-      offlineReady: 'Prêt à être utilisé hors ligne',
+      install: "Installer l'application",
       needRefresh: 'Une nouvelle version est disponible',
       reload: 'Recharger',
       dismiss: 'Fermer',
@@ -388,7 +388,7 @@ export const ui = {
       names: { Fajr: 'Fajr', Dhuhr: 'Dhuhr', Asr: 'Asr', Maghrib: 'Maghrib', Isha: 'Isha' },
     },
     pwa: {
-      offlineReady: 'Bereit für die Offline-Nutzung',
+      install: 'App installieren',
       needRefresh: 'Eine neue Version ist verfügbar',
       reload: 'Neu laden',
       dismiss: 'Schließen',
@@ -488,7 +488,7 @@ export const ui = {
       names: { Fajr: 'Fajr', Dhuhr: 'Dhuhr', Asr: 'Asr', Maghrib: 'Maghrib', Isha: 'Isha' },
     },
     pwa: {
-      offlineReady: 'Klaar voor offline gebruik',
+      install: 'App installeren',
       needRefresh: 'Er is een nieuwe versie beschikbaar',
       reload: 'Vernieuwen',
       dismiss: 'Sluiten',
@@ -588,7 +588,7 @@ export const ui = {
       names: { Fajr: 'Sabah', Dhuhr: 'Öğle', Asr: 'İkindi', Maghrib: 'Akşam', Isha: 'Yatsı' },
     },
     pwa: {
-      offlineReady: 'Çevrimdışı kullanıma hazır',
+      install: 'Uygulamayı yükle',
       needRefresh: 'Yeni bir sürüm mevcut',
       reload: 'Yenile',
       dismiss: 'Kapat',
@@ -688,7 +688,7 @@ export const ui = {
       names: { Fajr: 'فجر', Dhuhr: 'ظہر', Asr: 'عصر', Maghrib: 'مغرب', Isha: 'عشاء' },
     },
     pwa: {
-      offlineReady: 'آف لائن استعمال کے لیے تیار',
+      install: 'ایپ انسٹال کریں',
       needRefresh: 'نیا ورژن دستیاب ہے',
       reload: 'دوبارہ لوڈ کریں',
       dismiss: 'بند کریں',

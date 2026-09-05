@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { useLang, LANGS } from '../i18n/LanguageContext.jsx'
 import { useGender } from '../i18n/GenderContext.jsx'
+import InstallButton from './InstallButton.jsx'
 
 const routes = [
   { to: '/basics', key: 'basics' },
@@ -69,6 +70,7 @@ export default function Navbar() {
           </option>
         ))}
       </select>
+      <InstallButton />
     </>
   )
 
