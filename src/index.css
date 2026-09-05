@@ -517,8 +517,13 @@ select {
 }
 
 .btn-outline {
+  background: transparent;
   border-color: rgba(255, 255, 255, 0.5);
   color: #fff;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .btn-green {
