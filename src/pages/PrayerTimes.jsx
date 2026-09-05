@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom'
 import PrayerTimesWidget from '../components/PrayerTimesWidget.jsx'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { adhanPhrases } from '../data/adhan.js'
 
 const Dots = ({ f = 0, s = 0, w = 0 }) => (
   <span className="rakat-dots" aria-hidden="true">
@@ -163,6 +165,15 @@ const C = {
     forb: "Voluntary prayers are not offered: (1) from after Fajr until the sun has fully risen, (2) when the sun is at its exact zenith, and (3) from after Asr until sunset ('Uqbah ibn 'Amir — Sahih Muslim 831). Obligatory and missed prayers may still be made up.",
     extremeTitle: '🌙 What about places with extreme day lengths?',
     extreme: "In high latitudes where the sun barely sets or rises, follow your local mosque's timetable — they apply scholarly methods (nearest moderate city, or fixed intervals) endorsed by fiqh councils.",
+    adhanEyebrow: 'Recognise it, then say it',
+    adhanTitle: 'Learn the Call to Prayer (Adhan)',
+    adhanLead: 'The same words, in the same order, called out before every prayer, every day. Once you can recognise each line, reciting it yourself is just a matter of confidence.',
+    adhanFajrOnly: 'Fajr only',
+    adhanSpecialReply: 'Reply instead: "La hawla wala quwwata illa billah."',
+    adhanReplyTitle: '🗣️ How to respond when you hear it',
+    adhanReply: 'Repeat every phrase exactly as the mu\'adhin says it — except during "Hayya \'ala as-salah" and "Hayya \'ala al-falah", where you say instead: "La hawla wala quwwata illa billah" ("There is no power nor might except with Allah"). (Sahih Muslim 385)',
+    adhanDuaNote: "There's also a specific dua to say once the mu'adhin finishes — see",
+    adhanDuaLink: 'Duas & Surahs',
   },
   bg: {
     title: 'Петте ежедневни намаза и техните времена',
@@ -184,6 +195,15 @@ const C = {
     forb: 'Доброволни намази не се кланят: (1) след Фаджр, докато слънцето не се издигне напълно, (2) когато слънцето е точно в зенита, и (3) след Аср до залеза (Укба ибн Амир — Сахих Муслим 831). Задължителните и пропуснатите намази могат да се наваксват.',
     extremeTitle: '🌙 А местата с екстремно дълги дни?',
     extreme: 'В северните ширини, където слънцето почти не залязва или изгрява, следвай разписанието на местната джамия — те прилагат методи (най-близък умерен град или фиксирани интервали), одобрени от фикх съветите.',
+    adhanEyebrow: 'Разпознай го, после го произнеси',
+    adhanTitle: 'Научи призива за намаз (езан)',
+    adhanLead: 'Едни и същи думи, в един и същ ред, оповестявани преди всеки намаз, всеки ден. Щом можеш да разпознаеш всеки ред, да го произнесеш сам е въпрос на увереност.',
+    adhanFajrOnly: 'Само за Фаджр',
+    adhanSpecialReply: 'Отговори вместо това: „Ля хауля уа ля куввата илля биллях.“',
+    adhanReplyTitle: '🗣️ Как да отговориш, когато го чуеш',
+    adhanReply: 'Повтаряй всяка фраза точно както я казва муезинът — освен при „Хайя аля-с-саля“ и „Хайя аля-л-фаля“, където вместо това казваш: „Ля хауля уа ля куввата илля биллях“ („Няма сила и мощ освен с Аллах“). (Сахих Муслим 385)',
+    adhanDuaNote: 'Има и конкретна дуа, която се казва щом муезинът приключи — виж',
+    adhanDuaLink: 'Дуи и сури',
   },
   fr: {
     title: 'Les cinq prières quotidiennes et leurs horaires',
@@ -205,6 +225,15 @@ const C = {
     forb: "Les prières volontaires ne sont pas accomplies : (1) après le Fajr jusqu'à ce que le soleil se soit complètement levé, (2) lorsque le soleil est exactement à son zénith, et (3) après l'Asr jusqu'au coucher du soleil ('Uqbah ibn 'Amir — Sahih Muslim 831). Les prières obligatoires et manquées peuvent quand même être rattrapées.",
     extremeTitle: '🌙 Qu\'en est-il des endroits aux durées de jour extrêmes ?',
     extreme: "Dans les hautes latitudes où le soleil se couche ou se lève à peine, suis le calendrier de ta mosquée locale — elle applique des méthodes savantes (ville modérée la plus proche, ou intervalles fixes) approuvées par les conseils de fiqh.",
+    adhanEyebrow: 'Reconnais-le, puis dis-le',
+    adhanTitle: "Apprendre l'appel à la prière (Adhan)",
+    adhanLead: "Les mêmes mots, dans le même ordre, proclamés avant chaque prière, chaque jour. Une fois que tu reconnais chaque ligne, le réciter toi-même n'est qu'une question de confiance.",
+    adhanFajrOnly: 'Fajr uniquement',
+    adhanSpecialReply: 'Réponds plutôt : « La hawla wala quwwata illa billah. »',
+    adhanReplyTitle: "🗣️ Comment répondre quand tu l'entends",
+    adhanReply: "Répète chaque phrase exactement comme le mu'adhin la dit — sauf pendant « Hayya 'ala as-salah » et « Hayya 'ala al-falah », où tu dis plutôt : « La hawla wala quwwata illa billah » (« Il n'y a de force ni de puissance qu'en Allah »). (Sahih Muslim 385)",
+    adhanDuaNote: "Il y a aussi une dua précise à dire une fois que le mu'adhin termine — voir",
+    adhanDuaLink: 'Douas & Sourates',
   },
   de: {
     title: 'Die fünf täglichen Gebete und ihre Zeiten',
@@ -226,6 +255,15 @@ const C = {
     forb: "Freiwillige Gebete werden nicht verrichtet: (1) nach dem Fajr, bis die Sonne vollständig aufgegangen ist, (2) wenn die Sonne genau im Zenit steht, und (3) nach dem Asr bis zum Sonnenuntergang ('Uqbah ibn 'Amir — Sahih Muslim 831). Pflicht- und versäumte Gebete können trotzdem nachgeholt werden.",
     extremeTitle: '🌙 Was ist mit Orten mit extremen Taglängen?',
     extreme: "In hohen Breitengraden, wo die Sonne kaum untergeht oder aufgeht, folge dem Zeitplan deiner örtlichen Moschee — sie wenden von Fiqh-Räten anerkannte gelehrte Methoden an (nächstgelegene gemäßigte Stadt oder feste Intervalle).",
+    adhanEyebrow: 'Erkennen, dann sprechen',
+    adhanTitle: 'Den Gebetsruf (Adhan) lernen',
+    adhanLead: 'Dieselben Worte, in derselben Reihenfolge, jeden Tag vor jedem Gebet gerufen. Sobald du jede Zeile erkennst, ist es nur noch eine Frage des Selbstvertrauens, sie selbst zu rezitieren.',
+    adhanFajrOnly: 'Nur beim Fajr',
+    adhanSpecialReply: 'Antworte stattdessen: „La hawla wala quwwata illa billah.“',
+    adhanReplyTitle: '🗣️ Wie man antwortet, wenn man ihn hört',
+    adhanReply: 'Wiederhole jeden Satz genau so, wie der Muezzin ihn spricht — außer bei „Hayya \'ala as-salah“ und „Hayya \'ala al-falah“, wo du stattdessen sagst: „La hawla wala quwwata illa billah“ („Es gibt keine Macht noch Kraft außer durch Allah“). (Sahih Muslim 385)',
+    adhanDuaNote: 'Es gibt auch eine bestimmte Dua, die gesagt wird, sobald der Muezzin fertig ist — siehe',
+    adhanDuaLink: 'Duas & Suren',
   },
   nl: {
     title: 'De vijf dagelijkse gebeden en hun tijden',
@@ -247,6 +285,15 @@ const C = {
     forb: "Vrijwillige gebeden worden niet verricht: (1) vanaf na Fajr tot de zon volledig is opgekomen, (2) wanneer de zon precies in het zenit staat, en (3) vanaf na Asr tot zonsondergang ('Uqbah ibn 'Amir — Sahih Muslim 831). Verplichte en gemiste gebeden mogen wel worden ingehaald.",
     extremeTitle: '🌙 Hoe zit het met plaatsen met extreme daglengtes?',
     extreme: "In hoge breedtegraden waar de zon nauwelijks ondergaat of opkomt, volg je het rooster van je plaatselijke moskee — zij passen door fiqhraden goedgekeurde geleerde methoden toe (dichtstbijzijnde gematigde stad of vaste intervallen).",
+    adhanEyebrow: 'Herken het, zeg het dan',
+    adhanTitle: 'Leer de oproep tot gebed (Adhan)',
+    adhanLead: 'Dezelfde woorden, in dezelfde volgorde, elke dag vóór elk gebed uitgeroepen. Zodra je elke regel herkent, is het zelf reciteren ervan slechts een kwestie van vertrouwen.',
+    adhanFajrOnly: 'Alleen bij Fajr',
+    adhanSpecialReply: 'Antwoord in plaats daarvan: "La hawla wala quwwata illa billah."',
+    adhanReplyTitle: '🗣️ Hoe te reageren als je het hoort',
+    adhanReply: 'Herhaal elke zin precies zoals de mu\'adhin het zegt — behalve bij "Hayya \'ala as-salah" en "Hayya \'ala al-falah", waar je in plaats daarvan zegt: "La hawla wala quwwata illa billah" ("Er is geen kracht noch macht dan door Allah"). (Sahih Muslim 385)',
+    adhanDuaNote: "Er is ook een specifieke doea om te zeggen zodra de mu'adhin klaar is — zie",
+    adhanDuaLink: "Doea's & Soera's",
   },
   tr: {
     title: 'Beş Vakit Namaz ve Vakitleri',
@@ -268,6 +315,15 @@ const C = {
     forb: "Nafile namazlar şu vakitlerde kılınmaz: (1) Sabah'tan sonra güneş tamamen doğana kadar, (2) güneş tam tepe noktasındayken ve (3) İkindi'den sonra gün batımına kadar (Ukbe bin Amir — Sahih Müslim 831). Farz ve kaçırılan namazlar yine de kaza edilebilir.",
     extremeTitle: '🌙 Gün uzunluğunun aşırı olduğu yerler ne olacak?',
     extreme: "Güneşin neredeyse hiç batmadığı veya doğmadığı yüksek enlemlerde, yerel camiinin vakit çizelgesini takip et — onlar fıkıh konseylerince onaylanmış ilmî yöntemler uygular (en yakın ılıman şehir veya sabit aralıklar).",
+    adhanEyebrow: 'Önce tanı, sonra söyle',
+    adhanTitle: 'Ezanı öğren',
+    adhanLead: 'Her gün, her namazdan önce, aynı sırayla okunan aynı sözler. Her satırı tanıdığında, onu kendin okumak sadece bir özgüven meselesidir.',
+    adhanFajrOnly: 'Sadece Sabah',
+    adhanSpecialReply: 'Bunun yerine cevap ver: "La havle vela kuvvete illa billah."',
+    adhanReplyTitle: '🗣️ Duyduğunda nasıl karşılık verilir',
+    adhanReply: 'Müezzinin söylediği her cümleyi aynen tekrarla — "Hayye ale\'s-salah" ve "Hayye ale\'l-felah" hariç; bunların yerine şunu söyle: "La havle vela kuvvete illa billah" ("Güç ve kuvvet ancak Allah iledir"). (Sahih Müslim 385)',
+    adhanDuaNote: 'Müezzin bitirdiğinde söylenecek özel bir dua da vardır — bakınız',
+    adhanDuaLink: 'Dualar ve Sureler',
   },
   ur: {
     title: 'پانچ روزانہ نمازیں اور ان کے اوقات',
@@ -289,6 +345,15 @@ const C = {
     forb: 'نفلی نمازیں ادا نہیں کی جاتیں: (1) فجر کے بعد سے سورج مکمل طور پر طلوع ہونے تک، (2) جب سورج بالکل نصف النہار پر ہو، اور (3) عصر کے بعد سے غروبِ آفتاب تک (عقبہ بن عامر — صحیح مسلم 831)۔ فرض اور چھوٹی ہوئی نمازیں پھر بھی قضا کی جا سکتی ہیں۔',
     extremeTitle: '🌙 دن کی انتہائی لمبائی والی جگہوں کا کیا حکم ہے؟',
     extreme: 'ان بلند عرض بلد والے مقامات پر جہاں سورج بمشکل غروب یا طلوع ہوتا ہے، اپنی مقامی مسجد کے نظام الاوقات کی پیروی کریں — وہ فقہی کونسلوں کی توثیق کردہ علمی طریقے اپناتے ہیں (قریب ترین معتدل شہر، یا مقررہ وقفے)۔',
+    adhanEyebrow: 'پہچانیں، پھر ادا کریں',
+    adhanTitle: 'اذان سیکھیں',
+    adhanLead: 'ہر روز، ہر نماز سے پہلے، وہی الفاظ اسی ترتیب میں پکارے جاتے ہیں۔ جب آپ ہر سطر پہچان لیں، تو خود اسے پڑھنا محض اعتماد کی بات ہے۔',
+    adhanFajrOnly: 'صرف فجر',
+    adhanSpecialReply: 'اس کے بجائے جواب دیں: ”لَا حَوْلَ وَلَا قُوَّۃَ اِلَّا بِاللّٰہِ۔“',
+    adhanReplyTitle: '🗣️ سننے پر کیسے جواب دیں',
+    adhanReply: 'مؤذن جو کچھ کہے وہی الفاظ دہرائیں — سوائے ”حَیَّ عَلَی الصَّلَاۃ“ اور ”حَیَّ عَلَی الْفَلَاح“ کے، جہاں اس کے بجائے کہیں: ”لَا حَوْلَ وَلَا قُوَّۃَ اِلَّا بِاللّٰہِ“ (”کوئی طاقت اور قوت نہیں مگر اللہ کے ساتھ“)۔ (صحیح مسلم 385)',
+    adhanDuaNote: 'مؤذن کے ختم کرنے پر ایک خاص دعا بھی ہے — دیکھیں',
+    adhanDuaLink: 'دعائیں اور سورتیں',
   },
 }
 
@@ -367,6 +432,47 @@ export default function PrayerTimes() {
             <strong>{c.extremeTitle}</strong>
             {c.extreme}
           </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container">
+          <span className="eyebrow">{c.adhanEyebrow}</span>
+          <h2 className="section-title">{c.adhanTitle}</h2>
+          <p className="section-sub">{c.adhanLead}</p>
+
+          {adhanPhrases.map((p, i) => (
+            <div className="step-say" key={i}>
+              <div className="say-arabic" lang="ar">{p.arabic}</div>
+              <div className="say-translit">
+                {p.transliteration} {p.count > 1 ? `(×${p.count})` : ''}
+                {p.fajrOnly && (
+                  <>
+                    {' '}
+                    <span className="badge badge-sunnah">{c.adhanFajrOnly}</span>
+                  </>
+                )}
+              </div>
+              <div className="say-meaning">
+                {L(p.translation)}
+                {p.specialReply && (
+                  <>
+                    <br />
+                    {c.adhanSpecialReply}
+                  </>
+                )}
+              </div>
+            </div>
+          ))}
+
+          <div className="callout green" style={{ marginTop: 20 }}>
+            <strong>{c.adhanReplyTitle}</strong>
+            {c.adhanReply}
+          </div>
+
+          <p className="section-sub" style={{ marginTop: 16, marginBottom: 0 }}>
+            {c.adhanDuaNote} <Link to="/duas">{c.adhanDuaLink}</Link>.
+          </p>
         </div>
       </section>
     </>

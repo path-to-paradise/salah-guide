@@ -1,0 +1,122 @@
+// The adhan (call to prayer), phrase by phrase, so a beginner can learn to
+// recognise — and eventually recite — every line. Sequence and wording
+// follow the widely-taught Hanafi convention (no tarji' — the shahada is
+// said once aloud, not repeated softly first); a few schools differ on that
+// small point, which doesn't change the meaning of any line.
+export const adhanPhrases = [
+  {
+    arabic: 'اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ',
+    transliteration: 'Allahu Akbar, Allahu Akbar',
+    count: 4,
+    translation: {
+      en: 'Allah is the Greatest',
+      bg: 'Аллах е Превелик',
+      fr: 'Allah est le Plus Grand',
+      de: 'Allah ist der Größte',
+      nl: 'Allah is de Grootste',
+      tr: 'Allah en büyüktür',
+      ur: 'اللہ سب سے بڑا ہے',
+    },
+  },
+  {
+    arabic: 'أَشْهَدُ أَنْ لَا إِلَٰهَ إِلَّا اللَّهُ',
+    transliteration: "Ash-hadu al-la ilaha illallah",
+    count: 2,
+    translation: {
+      en: 'I bear witness that there is no god but Allah',
+      bg: 'Свидетелствам, че няма друг бог освен Аллах',
+      fr: "Je témoigne qu'il n'y a de divinité qu'Allah",
+      de: 'Ich bezeuge, dass es keinen Gott außer Allah gibt',
+      nl: 'Ik getuig dat er geen god is dan Allah',
+      tr: "Şehadet ederim ki Allah'tan başka ilah yoktur",
+      ur: 'میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں',
+    },
+  },
+  {
+    arabic: 'أَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ',
+    transliteration: 'Ash-hadu anna Muhammadar-rasulullah',
+    count: 2,
+    translation: {
+      en: 'I bear witness that Muhammad is the Messenger of Allah',
+      bg: 'Свидетелствам, че Мухаммед е пратеник на Аллах',
+      fr: "Je témoigne que Muhammad est le Messager d'Allah",
+      de: 'Ich bezeuge, dass Muhammad der Gesandte Allahs ist',
+      nl: 'Ik getuig dat Mohammed de Boodschapper van Allah is',
+      tr: "Şehadet ederim ki Muhammed Allah'ın Resûlüdür",
+      ur: 'میں گواہی دیتا ہوں کہ محمد اللہ کے رسول ہیں',
+    },
+  },
+  {
+    arabic: 'حَيَّ عَلَى الصَّلَاةِ',
+    transliteration: "Hayya 'alas-salah",
+    count: 2,
+    specialReply: true,
+    translation: {
+      en: 'Come to prayer',
+      bg: 'Ела на намаз',
+      fr: 'Venez à la prière',
+      de: 'Kommt zum Gebet',
+      nl: 'Kom tot het gebed',
+      tr: 'Haydi namaza',
+      ur: 'نماز کی طرف آؤ',
+    },
+  },
+  {
+    arabic: 'حَيَّ عَلَى الْفَلَاحِ',
+    transliteration: "Hayya 'alal-falah",
+    count: 2,
+    specialReply: true,
+    translation: {
+      en: 'Come to success',
+      bg: 'Ела към спасението',
+      fr: 'Venez à la réussite',
+      de: 'Kommt zum Erfolg',
+      nl: 'Kom tot de zaligheid',
+      tr: 'Haydi felaha',
+      ur: 'کامیابی کی طرف آؤ',
+    },
+  },
+  {
+    arabic: 'الصَّلَاةُ خَيْرٌ مِنَ النَّوْمِ',
+    transliteration: 'As-salatu khayrun minan-nawm',
+    count: 2,
+    fajrOnly: true,
+    translation: {
+      en: 'Prayer is better than sleep',
+      bg: 'Намазът е по-добър от съня',
+      fr: 'La prière est meilleure que le sommeil',
+      de: 'Das Gebet ist besser als der Schlaf',
+      nl: 'Het gebed is beter dan slapen',
+      tr: 'Namaz uykudan hayırlıdır',
+      ur: 'نماز نیند سے بہتر ہے',
+    },
+  },
+  {
+    arabic: 'اللَّهُ أَكْبَرُ، اللَّهُ أَكْبَرُ',
+    transliteration: 'Allahu Akbar, Allahu Akbar',
+    count: 2,
+    translation: {
+      en: 'Allah is the Greatest',
+      bg: 'Аллах е Превелик',
+      fr: 'Allah est le Plus Grand',
+      de: 'Allah ist der Größte',
+      nl: 'Allah is de Grootste',
+      tr: 'Allah en büyüktür',
+      ur: 'اللہ سب سے بڑا ہے',
+    },
+  },
+  {
+    arabic: 'لَا إِلَٰهَ إِلَّا اللَّهُ',
+    transliteration: 'La ilaha illallah',
+    count: 1,
+    translation: {
+      en: 'There is no god but Allah',
+      bg: 'Няма друг бог освен Аллах',
+      fr: "Il n'y a de divinité qu'Allah",
+      de: 'Es gibt keinen Gott außer Allah',
+      nl: 'Er is geen god dan Allah',
+      tr: "Allah'tan başka ilah yoktur",
+      ur: 'اللہ کے سوا کوئی معبود نہیں',
+    },
+  },
+]
