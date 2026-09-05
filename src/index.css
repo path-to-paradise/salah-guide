@@ -1976,7 +1976,7 @@ button.video-poster {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  z-index: 100;
+  z-index: 300;
   background: rgba(7, 46, 35, 0.82);
   backdrop-filter: blur(4px);
   display: flex;

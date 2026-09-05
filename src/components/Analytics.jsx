@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useLang } from '../i18n/LanguageContext.jsx'
+import { useGender } from '../i18n/GenderContext.jsx'
 import { isConfigured, loadAnalytics, trackPageView } from '../lib/analytics.js'
 
 const CONSENT_KEY = 'salah-consent'
@@ -9,6 +10,7 @@ const CONSENT_KEY = 'salah-consent'
 // two halves of the same concern: nothing tracks until the visitor accepts.
 export default function Analytics() {
   const { t } = useLang()
+  const { gender } = useGender()
   const location = useLocation()
   const [consent, setConsent] = useState(() => localStorage.getItem(CONSENT_KEY))
 
@@ -27,7 +29,11 @@ export default function Analytics() {
     setConsent(value)
   }
 
-  if (!isConfigured() || consent) return null
+  // Wait until the first-visit language/gender gate is done before asking
+  // about cookies too — otherwise the two dialogs stack on top of each
+  // other and, on short mobile screens, the banner can cover the gate's
+  // buttons entirely.
+  if (!isConfigured() || consent || !gender) return null
 
   return (
     <div className="consent-banner" role="dialog" aria-label={t.consent.message}>
