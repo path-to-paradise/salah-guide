@@ -272,11 +272,22 @@ function StepGuide() {
   )
 }
 
+const FEMALE_PRAY_VIDEOS = ['UYJkweNC7w0', 'KYUFRnrDyaw']
+const MALE_PRAY_VIDEOS = ['2ZEmsdEOpbk', 'K9Ud5E28Cpc', 'f6iR5elhDdk']
+
 export default function HowToPray() {
   const { lang } = useLang()
   const { gender } = useGender()
   const c = C[lang] || C.en
   const gNote = gender === 'female' ? c.femaleNote : gender === 'male' ? c.maleNote : null
+
+  // Show the prayer demonstrated by someone of the viewer's own gender;
+  // both sets if not chosen yet.
+  const prayVideos = videos.pray.filter((v) => {
+    if (gender === 'female') return FEMALE_PRAY_VIDEOS.includes(v.id)
+    if (gender === 'male') return MALE_PRAY_VIDEOS.includes(v.id)
+    return true
+  })
 
   return (
     <>
@@ -314,7 +325,7 @@ export default function HowToPray() {
           <h2 className="section-title">{c.watchTitle}</h2>
           <p className="section-sub">{c.watchSub}</p>
           <div className="video-grid">
-            {videos.pray.map((v) => (
+            {prayVideos.map((v) => (
               <VideoEmbed key={v.id} video={v} />
             ))}
           </div>

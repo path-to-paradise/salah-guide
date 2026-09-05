@@ -1,5 +1,10 @@
+import { useGender } from '../i18n/GenderContext.jsx'
+
 // Stylised illustrations of the prayer positions, drawn as rounded stick
-// figures inside a mihrab arch.
+// figures inside a mihrab arch. Deliberately abstract (no facial features,
+// no realistic body) — for the female theme a draped headscarf silhouette
+// is added behind the head so the figure reads as a woman praying, without
+// depicting an identifiable person.
 
 const strokeProps = {
   fill: 'none',
@@ -11,7 +16,40 @@ const strokeProps = {
 
 const HEAD = { fill: 'var(--green-dark)', stroke: 'none' }
 
-function Frame({ children, poseKey }) {
+// Head circle center/radius per pose — used to place the hijab drape
+// directly behind the right head in every position.
+const HEADS = {
+  standing: { cx: 110, cy: 78, r: 14 },
+  takbir: { cx: 110, cy: 78, r: 14 },
+  qiyam: { cx: 110, cy: 78, r: 14 },
+  ruku: { cx: 62, cy: 102, r: 13 },
+  sujud: { cx: 63, cy: 170, r: 12 },
+  sitting: { cx: 106, cy: 96, r: 14 },
+  salam: { cx: 118, cy: 96, r: 14 },
+}
+
+function hijabPath(cx, cy, r) {
+  return `M ${cx} ${cy - r - 7}
+    Q ${cx - r - 15} ${cy - r + 3} ${cx - r - 11} ${cy + r + 17}
+    L ${cx + r + 11} ${cy + r + 17}
+    Q ${cx + r + 15} ${cy - r + 3} ${cx} ${cy - r - 7}
+    Z`
+}
+
+function Hijab({ pose }) {
+  const head = HEADS[pose] || HEADS.standing
+  return (
+    <path
+      d={hijabPath(head.cx, head.cy, head.r)}
+      fill="var(--gold)"
+      fillOpacity="0.9"
+      stroke="var(--gold-dark)"
+      strokeWidth="2"
+    />
+  )
+}
+
+function Frame({ children, poseKey, pose, gender }) {
   return (
     <div className="figure-float">
       <svg viewBox="0 0 220 210" width="230" role="img" aria-hidden="true">
@@ -28,6 +66,7 @@ function Frame({ children, poseKey }) {
         <line x1="42" y1="183" x2="178" y2="183" stroke="var(--gold)" strokeWidth="4" strokeLinecap="round" />
         {/* key restarts the draw-in animation on every pose change */}
         <g className="figure-lines" key={poseKey}>
+          {gender === 'female' && <Hijab pose={pose} />}
           {children}
         </g>
       </svg>
@@ -97,5 +136,11 @@ const poses = {
 }
 
 export default function PoseFigure({ pose, poseKey }) {
-  return <Frame poseKey={poseKey ?? pose}>{poses[pose] || poses.standing}</Frame>
+  const { gender } = useGender()
+  const key = poses[pose] ? pose : 'standing'
+  return (
+    <Frame poseKey={poseKey ?? pose} pose={key} gender={gender}>
+      {poses[key]}
+    </Frame>
+  )
 }

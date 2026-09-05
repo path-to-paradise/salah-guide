@@ -65,6 +65,48 @@ export const videos = {
         ur: 'ایک نرم، اینیمیٹڈ رہنما — بچوں اور نئے سیکھنے والوں کے لیے بہترین۔',
       },
     },
+    {
+      id: 'UYJkweNC7w0',
+      title: {
+        en: "How to Pray 4 Rak'ahs — For Women",
+        bg: 'Как се кланят 4 рекята — за жени (англ.)',
+        fr: "Comment prier 4 rak'ahs — pour les femmes (en anglais)",
+        de: "Wie man 4 Rak'ahs betet — für Frauen (auf Englisch)",
+        nl: "Hoe je 4 rak'ahs bidt — voor vrouwen (in het Engels)",
+        tr: '4 Rekat Nasıl Kılınır — Kadınlar İçin (İngilizce)',
+        ur: '4 رکعتیں کیسے پڑھیں — خواتین کے لیے (انگریزی)',
+      },
+      desc: {
+        en: "A complete step-by-step walkthrough of a 4-rak'ah prayer, demonstrated for women (Hanafi postures — check with your own school for small differences).",
+        bg: 'Пълно преминаване стъпка по стъпка през намаз от 4 рекята, демонстрирано за жени (според ханефитския мазхаб — провери с твоя мазхаб за малки разлики).',
+        fr: "Un guide complet, étape par étape, d'une prière de 4 rak'ahs, démontré pour les femmes (postures hanafites — vérifie auprès de ton école pour les petites différences).",
+        de: "Eine vollständige Schritt-für-Schritt-Anleitung für ein Gebet mit 4 Rak'ahs, gezeigt für Frauen (hanafitische Haltungen — prüfe bei deiner eigenen Rechtsschule auf kleine Unterschiede).",
+        nl: "Een volledige stap-voor-stap uitleg van een gebed van 4 rak'ahs, gedemonstreerd voor vrouwen (hanafitische houdingen — controleer bij je eigen madhhab voor kleine verschillen).",
+        tr: "4 rekatlık bir namazın kadınlar için gösterildiği, adım adım tam bir anlatım (Hanefi duruşları — küçük farklar için kendi mezhebine danış).",
+        ur: '4 رکعت نماز کا مکمل قدم بہ قدم جائزہ، خواتین کے لیے دکھایا گیا (حنفی طریقہ — چھوٹے فرق کے لیے اپنے مسلک سے رجوع کریں)۔',
+      },
+    },
+    {
+      id: 'KYUFRnrDyaw',
+      title: {
+        en: 'How to Pray Isha — For Women (Beginners)',
+        bg: 'Как се кланя Иша — за жени (начинаещи, англ.)',
+        fr: "Comment prier l'Isha — pour les femmes (débutantes, en anglais)",
+        de: 'Wie man Isha betet — für Frauen (Anfängerinnen, auf Englisch)',
+        nl: 'Hoe je Isha bidt — voor vrouwen (beginners, in het Engels)',
+        tr: 'Yatsı Namazı Nasıl Kılınır — Kadınlar İçin (Yeni Başlayanlar, İngilizce)',
+        ur: 'عشاء کیسے پڑھیں — خواتین کے لیے (نئے سیکھنے والے، انگریزی)',
+      },
+      desc: {
+        en: "A gentle, beginner-friendly walkthrough of the 4 rak'ah Isha prayer, demonstrated for women (Hanafi postures).",
+        bg: 'Нежно, подходящо за начинаещи преминаване през намаза Иша от 4 рекята, демонстрирано за жени (според ханефитския мазхаб).',
+        fr: "Un guide doux et adapté aux débutantes pour la prière d'Isha en 4 rak'ahs, démontré pour les femmes (postures hanafites).",
+        de: "Eine sanfte, anfängerfreundliche Anleitung für das 4-Rak'ah-Isha-Gebet, gezeigt für Frauen (hanafitische Haltungen).",
+        nl: "Een zachte, beginnersvriendelijke uitleg van het Isha-gebed van 4 rak'ahs, gedemonstreerd voor vrouwen (hanafitische houdingen).",
+        tr: '4 rekatlık Yatsı namazının kadınlar için gösterildiği, yeni başlayanlara uygun yumuşak bir anlatım (Hanefi duruşları).',
+        ur: '4 رکعت عشاء کی نماز کا نرم، نئے سیکھنے والوں کے لیے مناسب جائزہ، خواتین کے لیے دکھایا گیا (حنفی طریقہ)۔',
+      },
+    },
   ],
   wudu: [
     {
