@@ -75,7 +75,7 @@ const prayers = [
       ur: 'جب سایہ چیز کے برابر ہو جائے سے لے کر غروبِ آفتاب تک (سورج زرد ہونے سے پہلے پڑھیں)',
     },
     fard: 4,
-    sunnahBefore: 0,
+    sunnahBefore: 4,
     sunnahAfter: 0,
     aloud: { en: 'Silent', bg: 'Тихо', fr: 'Silencieux', de: 'Leise', nl: 'Stil', tr: 'Sessiz', ur: 'خاموشی سے' },
     note: {
@@ -127,7 +127,7 @@ const prayers = [
       ur: 'شفق کے غائب ہونے سے آدھی رات تک (ضرورت ہو تو فجر تک جائز ہے)',
     },
     fard: 4,
-    sunnahBefore: 0,
+    sunnahBefore: 4,
     sunnahAfter: 2,
     aloud: { en: 'Aloud', bg: 'На глас', fr: 'À voix haute', de: 'Laut', nl: 'Hardop', tr: 'Sesli', ur: 'بلند آواز سے' },
     note: {
